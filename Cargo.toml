@@ -1,0 +1,13 @@
+[package]
+name = "whstlrs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+midir = "0.9.1"
+midly = "0.5.3"
+resvg = "0.40.0"
+rodio = "0.17.3"
+wgpu = "0.19.3"
