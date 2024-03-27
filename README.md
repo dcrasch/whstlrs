@@ -5,7 +5,7 @@ It helps people to practice song on a MIDI wind controller.
 
 ## tools
 
-* abc2whstlrs-ly -> lilypond format -> notes, midi, svg
+* abc2ly -> lilypond format -> notes, midi, svg
 
 ## Requirements
 
