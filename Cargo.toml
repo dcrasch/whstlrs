@@ -1,13 +1,11 @@
-[package]
-name = "whstlrs"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+members = [
+ "whistletab"
+]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+resolver="2"
 
-[dependencies]
-midir = "0.9.1"
-midly = "0.5.3"
-resvg = "0.40.0"
-rodio = "0.17.3"
-wgpu = "0.19.3"
+[workspace.depencies]
+wgpu = "0.19"
+wgpu-jumpstart = { path = "./wgpu-jumpstart" }
+whistletab = { path = "./whistletab" }
