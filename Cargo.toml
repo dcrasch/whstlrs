@@ -1,11 +1,18 @@
 [workspace]
 members = [
- "whistletab"
+ "whistletab",
+ "wgpu-jumpstart",
+ "whstlrs",
 ]
 
 resolver="2"
 
-[workspace.depencies]
+[workspace.dependencies]
 wgpu = "0.19"
+bytemuck = { version = "1.5", features = ["derive"] }
+log = "0.4"
+env_logger = "0.10"
+futures = "0.3"
+
 wgpu-jumpstart = { path = "./wgpu-jumpstart" }
 whistletab = { path = "./whistletab" }
