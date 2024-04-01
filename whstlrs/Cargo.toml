@@ -2,14 +2,7 @@
 name = "whstlrs"
 version = "0.1.0"
 edition = "2021"
-default-run = "whstlrs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
+default-run = "whstlrs"
 [dependencies]
-wgpu-jumpstart.workspace = true
-env_logger.workspace = true
-futures.workspace = true
-log.workspace = true
-bytemuck.workspace = true
-
-winit = { version = "0.29.15", features = ["rwh_05"] }

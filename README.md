@@ -23,6 +23,11 @@ It helps people to practice song on a MIDI wind controller.
 * https://github.com/kovaxis/midly
 * https://github.com/Boddlnagg/midir
 
+## Bevy Libraries
+* https://bevyengine.org/
+* https://github.com/Weasy666/bevy_svg
+* https://github.com/Nilirad/bevy_prototype_lyon
+
 ## Other tools
 
 * https://abcnotation.com/
