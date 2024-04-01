@@ -1,11 +1,14 @@
 mod context;
 mod utils;
+mod scene;
+mod render;
 
 use crate::context::Context;
 
 use std::sync::Arc;
+use scene::{playing_scene, Scene};
 use utils::window::WindowState;
-use wgpu_jumpstart::Surface;
+use wgpu_jumpstart::{wgpu, Surface};
 use wgpu_jumpstart::{Gpu, TransformUniform};
 use winit::{
     event::WindowEvent,
@@ -20,14 +23,17 @@ pub enum WhstlrsEvent {
 struct Whstlrs {
     context: Context,
     surface: Surface,
+    game_scene: Box<dyn Scene>,
 }
 
 impl Whstlrs {
     fn new(mut context: Context, surface: Surface) -> Self {
+        let whistletab_scene = playing_scene::PlayingScene::new(&mut context);
         context.resize();
         context.gpu.submit();
 
-        Self { context, surface }
+        Self { context, surface,
+            game_scene: Box::new(whistletab_scene), }
     }
     fn whstlrs_event(
         &mut self,
@@ -87,7 +93,7 @@ impl Whstlrs {
             WindowEvent::RedrawRequested => {
 
                 //self.update(delta);
-                //self.render();
+                self.render();
             }
             WindowEvent::CloseRequested => {
                 event_loop.exit();
@@ -95,6 +101,49 @@ impl Whstlrs {
             _ => {}
         }
     }
+
+    fn render(&mut self) {
+        let frame = loop {
+            let swap_chain_output = self.surface.get_current_texture();
+            match swap_chain_output {
+                Ok(s) => break s,
+                Err(err) => log::warn!("{:?}", err),
+            }
+        };
+
+        let view = &frame
+            .texture
+            .create_view(&wgpu::TextureViewDescriptor::default());
+
+        {
+            let bg_color = wgpu_jumpstart::Color::new(0.0,0.0,1.0,0.0).into_linear_wgpu_color();
+            let mut rpass =
+                self.context
+                    .gpu
+                    .encoder
+                    .begin_render_pass(&wgpu::RenderPassDescriptor {
+                        label: Some("Main Whstlrs Pass"),
+                        color_attachments: &[Some(wgpu::RenderPassColorAttachment {
+                            view,
+                            resolve_target: None,
+                            ops: wgpu::Operations {
+                                load: wgpu::LoadOp::Clear(bg_color),
+                                store: wgpu::StoreOp::Store,
+                            },
+                        })],
+
+                        depth_stencil_attachment: None,
+                        timestamp_writes: None,
+                        occlusion_query_set: None,
+                    });
+                    self.game_scene.render(&self.context.transform, &mut rpass);
+        }
+
+        self.context.gpu.submit();
+        frame.present();
+
+    }
+
 }
 
 fn main() {
