@@ -9,7 +9,7 @@ use bytemuck::{Pod, Zeroable};
 pub struct SheetPipeline {
     render_pipeline: wgpu::RenderPipeline,
 
-    quad: Shape,
+    // quad: Shape,
 
     time_uniform: Uniform<TimeUniform>,
 }
@@ -39,29 +39,32 @@ impl<'a> SheetPipeline {
                 .create_pipeline_layout(&wgpu::PipelineLayoutDescriptor {
                     label: None,
                     bind_group_layouts: &[
-                        &transform_uniform.bind_group_layout,
-                        &time_uniform.bind_group_layout,
+			 //&transform_uniform.bind_group_layout,
+                        //&time_uniform.bind_group_layout,
                     ],
                     push_constant_ranges: &[],
                 });
 
         let target = wgpu_jumpstart::default_color_target_state(gpu.texture_format);
 
+
         let render_pipeline = wgpu::RenderPipelineDescriptor::builder(
             render_pipeline_layout,
             wgpu::VertexState {
                 module: &shader,
                 entry_point: "vs_main",
-                buffers: &[Shape::layout()],
+		buffers: &[//Shape::layout()
+		],
+
             },
         )
         .fragment("fs_main", &shader, &[Some(target)])
         .create_render_pipeline(&gpu.device);
 
-        let quad = Shape::new_quad(&gpu.device);
+	//let quad = Shape::new_quad(&gpu.device);
         Self {
             render_pipeline,
-            quad,
+	    //quad,
             time_uniform,
         }
     }
@@ -72,12 +75,12 @@ impl<'a> SheetPipeline {
         render_pass: &mut wgpu::RenderPass<'a>,
     ) {
         render_pass.set_pipeline(&self.render_pipeline);
-        render_pass.set_bind_group(0, &transform_uniform.bind_group, &[]);
-        render_pass.set_bind_group(1, &self.time_uniform.bind_group, &[]);
+        //render_pass.set_bind_group(0, &transform_uniform.bind_group, &[]);
+        //render_pass.set_bind_group(1, &self.time_uniform.bind_group, &[]);
 
-        render_pass.set_vertex_buffer(0, self.quad.vertex_buffer.slice(..));
-
-        render_pass.set_index_buffer(self.quad.index_buffer.slice(..), wgpu::IndexFormat::Uint16);
+        //render_pass.set_vertex_buffer(0, self.quad.vertex_buffer.slice(..));
+	render_pass.draw(0..6,0..1);
+        //render_pass.set_index_buffer(self.quad.index_buffer.slice(..), wgpu::IndexFormat::Uint16);
     }
 }
 
