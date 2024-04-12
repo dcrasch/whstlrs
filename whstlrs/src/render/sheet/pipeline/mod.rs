@@ -163,15 +163,11 @@ impl MyUniform {
     }
 }
 
-fn collect_paths(
-    parent: &usvg::Group,
-    paths: &mut Vec<usvg::Path>,
-) {
+fn collect_paths(parent: &usvg::Group, paths: &mut Vec<usvg::Path>) {
     for node in parent.children() {
         if let usvg::Node::Group(ref group) = node {
             collect_paths(group, paths);
-        }
-        else if let usvg::Node::Path(ref p) = node {
+        } else if let usvg::Node::Path(ref p) = node {
             paths.push(*p.to_owned());
         }
     }
@@ -203,68 +199,66 @@ impl<'a> SheetPipeline {
             ty: f32::NAN,
         };
         let view_box = rtree.view_box();
-        let mut paths : Vec<usvg::Path> = Vec::new();
+        let mut paths: Vec<usvg::Path> = Vec::new();
         collect_paths(rtree.root(), &mut paths);
         for p in paths {
-                let t = p.abs_transform();
-                if t != prev_transform {
-                    transforms.push(GpuTransform {
-                        data0: [t.sx, t.kx, t.ky, t.sy],
-                        data1: [t.tx, t.ty, 0.0, 0.0],
-                    });
-                }
-                prev_transform = t;
+            let t = p.abs_transform();
+            if t != prev_transform {
+                transforms.push(GpuTransform {
+                    data0: [t.sx, t.kx, t.ky, t.sy],
+                    data1: [t.tx, t.ty, 0.0, 0.0],
+                });
+            }
+            prev_transform = t;
 
-                let transform_idx = transforms.len() as u32 - 1;
+            let transform_idx = transforms.len() as u32 - 1;
 
-                if let Some(ref fill) = p.fill() {
-                    // fall back to always use color fill
-                    // no gradients (yet?)
-                    let color : usvg::Color = match fill.paint() {
-                        usvg::Paint::Color(c) => c.clone(),
-                        _ => FALLBACK_COLOR,
-                    };
-                    
+            if let Some(ref fill) = p.fill() {
+                // fall back to always use color fill
+                // no gradients (yet?)
+                let color: usvg::Color = match fill.paint() {
+                    usvg::Paint::Color(c) => c.clone(),
+                    _ => FALLBACK_COLOR,
+                };
 
-                    primitives.push(GpuPrimitive::new(
-                        transform_idx,
-                        color,
-                        fill.opacity().get(),
-                    ));
+                primitives.push(GpuPrimitive::new(
+                    transform_idx,
+                    color,
+                    fill.opacity().get(),
+                ));
 
-                    fill_tess
-                        .tessellate(
-                            convert_path(&p),
-                            &FillOptions::tolerance(0.01),
-                            &mut BuffersBuilder::new(
-                                &mut mesh,
-                                VertexCtor {
-                                    prim_id: primitives.len() as u32 - 1,
-                                },
-                            ),
-                        )
-                        .expect("Error during tessellation!");
-                }
-
-                if let Some(ref stroke) = p.stroke() {
-                    let (stroke_color, stroke_opts) = convert_stroke(stroke);
-                    primitives.push(GpuPrimitive::new(
-                        transform_idx,
-                        stroke_color,
-                        stroke.opacity().get(),
-                    ));
-                    let _ = stroke_tess.tessellate(
+                fill_tess
+                    .tessellate(
                         convert_path(&p),
-                        &stroke_opts.with_tolerance(0.01),
+                        &FillOptions::tolerance(0.01),
                         &mut BuffersBuilder::new(
                             &mut mesh,
                             VertexCtor {
                                 prim_id: primitives.len() as u32 - 1,
                             },
                         ),
-                    );
-                }
-        
+                    )
+                    .expect("Error during tessellation!");
+            }
+
+            if let Some(ref stroke) = p.stroke() {
+                let (stroke_color, stroke_opts) = convert_stroke(stroke);
+                primitives.push(GpuPrimitive::new(
+                    transform_idx,
+                    stroke_color,
+                    stroke.opacity().get(),
+                ));
+                let _ = stroke_tess.tessellate(
+                    convert_path(&p),
+                    &stroke_opts.with_tolerance(0.01),
+                    &mut BuffersBuilder::new(
+                        &mut mesh,
+                        VertexCtor {
+                            prim_id: primitives.len() as u32 - 1,
+                        },
+                    ),
+                );
+            }
         }
 
         let myuniform = MyUniform::new(&gpu.device, &primitives, &transforms);
@@ -384,7 +378,7 @@ impl<'a> SheetPipeline {
 
     pub fn update_time(&mut self, gpu: &mut Gpu, delta: Duration) {
         let d = delta.as_secs_f32();
-        println!("{:?}",d);
+        println!("{:?}", d);
     }
 
     pub fn render(
@@ -470,7 +464,7 @@ impl StrokeVertexConstructor<GpuVertex> for VertexCtor {
 /// Some glue between usvg's iterators and lyon's.
 
 pub struct PathConvIter<'a> {
-    iter: usvg::tiny_skia_path::PathSegmentsIter<'a>, 
+    iter: usvg::tiny_skia_path::PathSegmentsIter<'a>,
     //std::slice::Iter<'a, usvg::tiny_skia_path::PathSegment>,
     prev: Point,
     first: Point,
@@ -492,7 +486,7 @@ impl<'l> Iterator for PathConvIter<'l> {
                     let last = self.prev;
                     let first = self.first;
                     self.needs_end = false;
-                    self.prev = Point::new(p.x,p.y);
+                    self.prev = Point::new(p.x, p.y);
                     self.deferred = Some(PathEvent::Begin { at: self.prev });
                     self.first = self.prev;
                     Some(PathEvent::End {
@@ -501,7 +495,7 @@ impl<'l> Iterator for PathConvIter<'l> {
                         close: false,
                     })
                 } else {
-                    self.first = Point::new(p.x,p.y);
+                    self.first = Point::new(p.x, p.y);
                     self.needs_end = true;
                     Some(PathEvent::Begin { at: self.first })
                 }
@@ -509,7 +503,7 @@ impl<'l> Iterator for PathConvIter<'l> {
             Some(usvg::tiny_skia_path::PathSegment::LineTo(p)) => {
                 self.needs_end = true;
                 let from = self.prev;
-                self.prev = Point::new(p.x,p.y);
+                self.prev = Point::new(p.x, p.y);
                 Some(PathEvent::Line {
                     from,
                     to: self.prev,
@@ -519,20 +513,27 @@ impl<'l> Iterator for PathConvIter<'l> {
                 // https://www.w3.org/TR/SVG/paths.html#PathDataQuadraticBezierCommands
                 self.needs_end = true;
                 let from = self.prev;
-                self.prev = Point::new(p2.x,p2.y);
-                let ctrl = Point::new(p1.x,p1.y);
-                Some(PathEvent::Quadratic { from, ctrl, to: self.prev})
-          
-            },
+                self.prev = Point::new(p2.x, p2.y);
+                let ctrl = Point::new(p1.x, p1.y);
+                Some(PathEvent::Quadratic {
+                    from,
+                    ctrl,
+                    to: self.prev,
+                })
+            }
             Some(usvg::tiny_skia_path::PathSegment::CubicTo(p1, p2, p3)) => {
                 // https://www.w3.org/TR/SVG/paths.html#PathDataCubicBezierCommands
                 self.needs_end = true;
                 let from = self.prev;
-                self.prev = Point::new(p3.x,p3.y);
-                let ctrl1 = Point::new(p1.x,p1.y);
-                let ctrl2 = Point::new(p2.x,p2.y);
-                Some(PathEvent::Cubic { from, ctrl1, ctrl2, to: self.prev })
-
+                self.prev = Point::new(p3.x, p3.y);
+                let ctrl1 = Point::new(p1.x, p1.y);
+                let ctrl2 = Point::new(p2.x, p2.y);
+                Some(PathEvent::Cubic {
+                    from,
+                    ctrl1,
+                    ctrl2,
+                    to: self.prev,
+                })
             }
             Some(usvg::tiny_skia_path::PathSegment::Close) => {
                 self.needs_end = false;
@@ -556,7 +557,7 @@ impl<'l> Iterator for PathConvIter<'l> {
                 } else {
                     None
                 }
-            },
+            }
         }
     }
 }
