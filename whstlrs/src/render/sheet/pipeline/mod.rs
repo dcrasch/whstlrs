@@ -1,6 +1,8 @@
 mod instance_data;
 
-use usvg::prelude::*;
+use std::borrow::BorrowMut;
+
+use resvg::usvg;
 use wgpu_jumpstart::wgpu::util::DeviceExt;
 use wgpu_jumpstart::wgpu::BindGroup;
 use wgpu_jumpstart::{wgpu, Gpu, RenderPipelineBuilder, Shape, TransformUniform, Uniform};
@@ -160,6 +162,20 @@ impl MyUniform {
     }
 }
 
+fn collect_paths(
+    parent: &usvg::Group,
+    paths: &mut Vec<usvg::Path>,
+) {
+    for node in parent.children() {
+        if let usvg::Node::Group(ref group) = node {
+            collect_paths(group, paths);
+        }
+        else if let usvg::Node::Path(ref p) = node {
+            paths.push(*p.to_owned());
+        }
+    }
+}
+
 impl<'a> SheetPipeline {
     pub fn new(gpu: &Gpu, transform_uniform: &Uniform<TransformUniform>) -> Self {
         // SVG
@@ -170,51 +186,54 @@ impl<'a> SheetPipeline {
         let mut stroke_tess = StrokeTessellator::new();
         let mut mesh: VertexBuffers<_, u32> = VertexBuffers::new();
 
+        let fontdb = usvg::fontdb::Database::new();
         let opt = usvg::Options::default();
         let file_data = std::fs::read(filename).unwrap();
-        let rtree = usvg::Tree::from_data(&file_data, &opt).unwrap();
+        let rtree = usvg::Tree::from_data(&file_data, &opt, &fontdb).unwrap();
         let mut transforms = Vec::new();
         let mut primitives = Vec::new();
 
         let mut prev_transform = usvg::Transform {
-            a: f64::NAN,
-            b: f64::NAN,
-            c: f64::NAN,
-            d: f64::NAN,
-            e: f64::NAN,
-            f: f64::NAN,
+            sx: f32::NAN,
+            kx: f32::NAN,
+            ky: f32::NAN,
+            sy: f32::NAN,
+            tx: f32::NAN,
+            ty: f32::NAN,
         };
-        let view_box = rtree.svg_node().view_box;
-        for node in rtree.root().descendants() {
-            if let usvg::NodeKind::Path(ref p) = *node.borrow() {
-                let t = node.transform();
+        let view_box = rtree.view_box();
+        let mut paths : Vec<usvg::Path> = Vec::new();
+        collect_paths(rtree.root(), &mut paths);
+        for p in paths {
+                let t = p.abs_transform();
                 if t != prev_transform {
                     transforms.push(GpuTransform {
-                        data0: [t.a as f32, t.b as f32, t.c as f32, t.d as f32],
-                        data1: [t.e as f32, t.f as f32, 0.0, 0.0],
+                        data0: [t.sx, t.kx, t.ky, t.sy],
+                        data1: [t.tx, t.ty, 0.0, 0.0],
                     });
                 }
                 prev_transform = t;
 
                 let transform_idx = transforms.len() as u32 - 1;
 
-                if let Some(ref fill) = p.fill {
+                if let Some(ref fill) = p.fill() {
                     // fall back to always use color fill
                     // no gradients (yet?)
-                    let color = match fill.paint {
-                        usvg::Paint::Color(c) => c,
+                    let color : usvg::Color = match fill.paint() {
+                        usvg::Paint::Color(c) => c.clone(),
                         _ => FALLBACK_COLOR,
                     };
+                    
 
                     primitives.push(GpuPrimitive::new(
                         transform_idx,
                         color,
-                        fill.opacity.value() as f32,
+                        fill.opacity().get(),
                     ));
 
                     fill_tess
                         .tessellate(
-                            convert_path(p),
+                            convert_path(&p),
                             &FillOptions::tolerance(0.01),
                             &mut BuffersBuilder::new(
                                 &mut mesh,
@@ -226,15 +245,15 @@ impl<'a> SheetPipeline {
                         .expect("Error during tessellation!");
                 }
 
-                if let Some(ref stroke) = p.stroke {
+                if let Some(ref stroke) = p.stroke() {
                     let (stroke_color, stroke_opts) = convert_stroke(stroke);
                     primitives.push(GpuPrimitive::new(
                         transform_idx,
                         stroke_color,
-                        stroke.opacity.value() as f32,
+                        stroke.opacity().get(),
                     ));
                     let _ = stroke_tess.tessellate(
-                        convert_path(p),
+                        convert_path(&p),
                         &stroke_opts.with_tolerance(0.01),
                         &mut BuffersBuilder::new(
                             &mut mesh,
@@ -244,7 +263,7 @@ impl<'a> SheetPipeline {
                         ),
                     );
                 }
-            }
+        
         }
 
         let myuniform = MyUniform::new(&gpu.device, &primitives, &transforms);
@@ -362,6 +381,10 @@ impl<'a> SheetPipeline {
         }
     }
 
+    pub fn update_time(&mut self, queue: &wgpu::Queue, time: f32) {
+        // todo
+    }
+
     pub fn render(
         &'a self,
         transform_uniform: &'a Uniform<TransformUniform>,
@@ -369,7 +392,6 @@ impl<'a> SheetPipeline {
     ) {
         render_pass.set_pipeline(&self.render_pipeline);
         render_pass.set_bind_group(0, &self.uniform.bind_group, &[]);
-        //render_pass.set_bind_group(0, &transform_uniform.bind_group, &[]);
         render_pass.set_vertex_buffer(0, self.mesh.vertex_buffer.slice(..));
         render_pass.set_index_buffer(self.mesh.index_buffer.slice(..), wgpu::IndexFormat::Uint32);
 
@@ -445,12 +467,9 @@ impl StrokeVertexConstructor<GpuVertex> for VertexCtor {
 }
 /// Some glue between usvg's iterators and lyon's.
 
-fn point(x: &f64, y: &f64) -> Point {
-    Point::new((*x) as f32, (*y) as f32)
-}
-
 pub struct PathConvIter<'a> {
-    iter: std::slice::Iter<'a, usvg::PathSegment>,
+    iter: usvg::tiny_skia_path::PathSegmentsIter<'a>, 
+    //std::slice::Iter<'a, usvg::tiny_skia_path::PathSegment>,
     prev: Point,
     first: Point,
     needs_end: bool,
@@ -466,12 +485,12 @@ impl<'l> Iterator for PathConvIter<'l> {
 
         let next = self.iter.next();
         match next {
-            Some(usvg::PathSegment::MoveTo { x, y }) => {
+            Some(usvg::tiny_skia_path::PathSegment::MoveTo(p)) => {
                 if self.needs_end {
                     let last = self.prev;
                     let first = self.first;
                     self.needs_end = false;
-                    self.prev = point(x, y);
+                    self.prev = Point::new(p.x,p.y);
                     self.deferred = Some(PathEvent::Begin { at: self.prev });
                     self.first = self.prev;
                     Some(PathEvent::End {
@@ -480,39 +499,40 @@ impl<'l> Iterator for PathConvIter<'l> {
                         close: false,
                     })
                 } else {
-                    self.first = point(x, y);
+                    self.first = Point::new(p.x,p.y);
                     self.needs_end = true;
                     Some(PathEvent::Begin { at: self.first })
                 }
             }
-            Some(usvg::PathSegment::LineTo { x, y }) => {
+            Some(usvg::tiny_skia_path::PathSegment::LineTo(p)) => {
                 self.needs_end = true;
                 let from = self.prev;
-                self.prev = point(x, y);
+                self.prev = Point::new(p.x,p.y);
                 Some(PathEvent::Line {
                     from,
                     to: self.prev,
                 })
             }
-            Some(usvg::PathSegment::CurveTo {
-                x1,
-                y1,
-                x2,
-                y2,
-                x,
-                y,
-            }) => {
+            Some(usvg::tiny_skia_path::PathSegment::QuadTo(p1, p2)) => {
+                // https://www.w3.org/TR/SVG/paths.html#PathDataQuadraticBezierCommands
                 self.needs_end = true;
                 let from = self.prev;
-                self.prev = point(x, y);
-                Some(PathEvent::Cubic {
-                    from,
-                    ctrl1: point(x1, y1),
-                    ctrl2: point(x2, y2),
-                    to: self.prev,
-                })
+                self.prev = Point::new(p2.x,p2.y);
+                let ctrl = Point::new(p1.x,p1.y);
+                Some(PathEvent::Quadratic { from, ctrl, to: self.prev})
+          
+            },
+            Some(usvg::tiny_skia_path::PathSegment::CubicTo(p1, p2, p3)) => {
+                // https://www.w3.org/TR/SVG/paths.html#PathDataCubicBezierCommands
+                self.needs_end = true;
+                let from = self.prev;
+                self.prev = Point::new(p3.x,p3.y);
+                let ctrl1 = Point::new(p1.x,p1.y);
+                let ctrl2 = Point::new(p2.x,p2.y);
+                Some(PathEvent::Cubic { from, ctrl1, ctrl2, to: self.prev })
+
             }
-            Some(usvg::PathSegment::ClosePath) => {
+            Some(usvg::tiny_skia_path::PathSegment::Close) => {
                 self.needs_end = false;
                 self.prev = self.first;
                 Some(PathEvent::End {
@@ -534,14 +554,14 @@ impl<'l> Iterator for PathConvIter<'l> {
                 } else {
                     None
                 }
-            }
+            },
         }
     }
 }
 
 pub fn convert_path(p: &usvg::Path) -> PathConvIter {
     PathConvIter {
-        iter: p.data.iter(),
+        iter: p.data().segments(),
         first: Point::new(0.0, 0.0),
         prev: Point::new(0.0, 0.0),
         deferred: None,
@@ -550,23 +570,24 @@ pub fn convert_path(p: &usvg::Path) -> PathConvIter {
 }
 
 pub fn convert_stroke(s: &usvg::Stroke) -> (usvg::Color, StrokeOptions) {
-    let color = match s.paint {
-        usvg::Paint::Color(c) => c,
+    let color = match s.paint() {
+        usvg::Paint::Color(c) => c.clone(),
         _ => FALLBACK_COLOR,
     };
-    let linecap = match s.linecap {
+    let linecap = match s.linecap() {
         usvg::LineCap::Butt => tessellation::LineCap::Butt,
         usvg::LineCap::Square => tessellation::LineCap::Square,
         usvg::LineCap::Round => tessellation::LineCap::Round,
     };
-    let linejoin = match s.linejoin {
+    let linejoin = match s.linejoin() {
         usvg::LineJoin::Miter => tessellation::LineJoin::Miter,
         usvg::LineJoin::Bevel => tessellation::LineJoin::Bevel,
         usvg::LineJoin::Round => tessellation::LineJoin::Round,
+        usvg::LineJoin::MiterClip => tessellation::LineJoin::MiterClip,
     };
 
     let opt = StrokeOptions::tolerance(0.01)
-        .with_line_width(s.width.value() as f32)
+        .with_line_width(s.width().get() as f32)
         .with_line_cap(linecap)
         .with_line_join(linejoin);
 

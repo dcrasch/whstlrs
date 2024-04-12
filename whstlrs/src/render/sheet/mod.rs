@@ -16,6 +16,11 @@ impl SheetRenderer {
         Self { sheet_pipeline }
     }
 
+
+    pub fn update(&mut self, queue: &wgpu::Queue, time: f32) {
+        self.sheet_pipeline.update_time(queue, time);
+    }
+
     pub fn render<'rpass>(
         &'rpass mut self,
         transform_uniform: &'rpass Uniform<TransformUniform>,

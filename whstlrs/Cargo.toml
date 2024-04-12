@@ -13,5 +13,6 @@ log.workspace = true
 bytemuck.workspace = true
 
 winit = { version = "0.29.15", features = ["rwh_05"] }
-usvg = "0.15.0"                                        ## TODO update
-lyon = "1.0.1"
+usvg = "0.41"
+lyon = "1.0"
+resvg = "0.41"
