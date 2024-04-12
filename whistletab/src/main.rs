@@ -9,11 +9,11 @@ fn main() {
     for node in rtree.root().children().iter() {
         match node {
             usvg::Node::Group(ref g) => {
-		if !g.id().is_empty() {
-		    println!("{:?}",g);
-		}
-            },
-            _ => ()
+                if !g.id().is_empty() {
+                    println!("{:?}", g);
+                }
+            }
+            _ => (),
         }
-    } 
+    }
 }

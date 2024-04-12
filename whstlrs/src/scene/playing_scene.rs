@@ -6,28 +6,20 @@ use super::Scene;
 use crate::render::SheetRenderer;
 
 pub struct PlayingScene {
-    sheet : SheetRenderer
+    sheet: SheetRenderer,
 }
 
 impl PlayingScene {
-    
     pub fn new(ctx: &Context) -> Self {
-        let mut sheet = SheetRenderer::new(
-            &ctx.gpu,
-            &ctx.transform,
-        );
-        Self {
-            sheet,
-        }
-
+        let mut sheet = SheetRenderer::new(&ctx.gpu, &ctx.transform);
+        Self { sheet }
     }
 }
 
 impl Scene for PlayingScene {
     fn update(&mut self, ctx: &mut Context, delta: std::time::Duration) {
-        todo!()
+        self.sheet.update_time(&mut ctx.gpu, delta);
     }
-
 
     fn render<'rpass>(
         &'rpass mut self,

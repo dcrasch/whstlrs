@@ -1,9 +1,9 @@
+use crate::utils::window::WindowState;
+use crate::WhstlrsEvent;
 use std::sync::Arc;
 use wgpu_jumpstart::{wgpu, Gpu, TransformUniform, Uniform};
 use winit::event_loop::EventLoopProxy;
 use winit::window::Window;
-use crate::WhstlrsEvent;
-use crate::utils::window::WindowState;
 pub struct Context {
     pub window: Arc<Window>,
     pub window_state: WindowState,
