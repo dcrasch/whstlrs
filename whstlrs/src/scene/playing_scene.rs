@@ -18,7 +18,7 @@ impl PlayingScene {
 
 impl Scene for PlayingScene {
     fn update(&mut self, ctx: &mut Context, delta: std::time::Duration) {
-        todo!()
+        self.sheet.update_time(&mut ctx.gpu, delta);
     }
 
     fn render<'rpass>(

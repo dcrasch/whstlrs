@@ -1,6 +1,7 @@
 mod instance_data;
 
 use std::borrow::BorrowMut;
+use std::time::Duration;
 
 use resvg::usvg;
 use wgpu_jumpstart::wgpu::util::DeviceExt;
@@ -381,8 +382,9 @@ impl<'a> SheetPipeline {
         }
     }
 
-    pub fn update_time(&mut self, queue: &wgpu::Queue, time: f32) {
-        // todo
+    pub fn update_time(&mut self, gpu: &mut Gpu, delta: Duration) {
+        let d = delta.as_secs_f32();
+        println!("{:?}",d);
     }
 
     pub fn render(

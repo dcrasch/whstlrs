@@ -1,3 +1,5 @@
+use std::time::Duration;
+
 use crate::TransformUniform;
 use wgpu_jumpstart::wgpu;
 use wgpu_jumpstart::Gpu;
@@ -17,8 +19,8 @@ impl SheetRenderer {
     }
 
 
-    pub fn update(&mut self, queue: &wgpu::Queue, time: f32) {
-        self.sheet_pipeline.update_time(queue, time);
+    pub fn update_time(&mut self, gpu: &mut Gpu, delta: Duration) {
+        self.sheet_pipeline.update_time(gpu, delta);
     }
 
     pub fn render<'rpass>(
