@@ -400,13 +400,17 @@ impl<'a> SheetPipeline {
         let mut notes = self
             .notes
             .iter()
-            .map(|x| (x.0.clone(), x.1.clone()))
-            .collect::<Vec<(String, Vec<usize>)>>();
+            .map(|x| {
+                let idx: Vec<u32> = x.0.split('-').flat_map(str::parse).collect();
+
+                (idx[0], idx[1], x.1.clone())
+            })
+            .collect::<Vec<(u32, u32, Vec<usize>)>>();
         notes.sort();
         let notes_count = notes.len();
         let idx = d as usize % notes_count;
         let note = &notes[idx];
-        let prim_id = note.1[0];
+        let prim_id = note.2[0];
         let mut prims = self.primitives.clone();
         let color: usvg::Color = Color::new_rgb(255, 0, 0);
 
