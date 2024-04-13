@@ -7,6 +7,7 @@ use crate::context::Context;
 
 use scene::{playing_scene, Scene};
 use std::sync::Arc;
+use std::time::Duration;
 use utils::window::WindowState;
 use wgpu_jumpstart::{wgpu, Surface};
 use wgpu_jumpstart::{Gpu, TransformUniform};
@@ -24,6 +25,7 @@ struct Whstlrs {
     context: Context,
     surface: Surface,
     game_scene: Box<dyn Scene>,
+    last_time: std::time::Instant,
 }
 
 impl Whstlrs {
@@ -36,6 +38,7 @@ impl Whstlrs {
             context,
             surface,
             game_scene: Box::new(whistletab_scene),
+            last_time: std::time::Instant::now(),
         }
     }
     fn whstlrs_event(
@@ -94,7 +97,9 @@ impl Whstlrs {
                 _ => {}
             },
             WindowEvent::RedrawRequested => {
-                //self.update(delta);
+                let delta = self.last_time.elapsed();
+
+                self.update(delta);
                 self.render();
             }
             WindowEvent::CloseRequested => {
@@ -102,6 +107,10 @@ impl Whstlrs {
             }
             _ => {}
         }
+    }
+
+    fn update(&mut self, delta: Duration) {
+        self.game_scene.update(&mut self.context, delta);
     }
 
     fn render(&mut self) {
@@ -118,7 +127,7 @@ impl Whstlrs {
             .create_view(&wgpu::TextureViewDescriptor::default());
 
         {
-            let bg_color = wgpu_jumpstart::Color::new(0.0, 0.0, 1.0, 0.0).into_linear_wgpu_color();
+            let bg_color = wgpu_jumpstart::Color::new(1.0, 1.0, 1.0, 0.0).into_linear_wgpu_color();
             let mut rpass =
                 self.context
                     .gpu

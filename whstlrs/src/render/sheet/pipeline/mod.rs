@@ -1,12 +1,16 @@
 mod instance_data;
 
 use std::borrow::BorrowMut;
+use std::collections::HashMap;
 use std::time::Duration;
 
 use resvg::usvg;
+use usvg::Color;
 use wgpu_jumpstart::wgpu::util::DeviceExt;
 use wgpu_jumpstart::wgpu::BindGroup;
-use wgpu_jumpstart::{wgpu, Gpu, RenderPipelineBuilder, Shape, TransformUniform, Uniform};
+use wgpu_jumpstart::{
+    wgpu, Gpu, Instances, RenderPipelineBuilder, Shape, TransformUniform, Uniform,
+};
 
 use bytemuck::{Pod, Zeroable};
 
@@ -24,6 +28,8 @@ pub struct SheetPipeline {
     render_pipeline: wgpu::RenderPipeline,
     mesh: Mesh,
     uniform: MyUniform,
+    notes: HashMap<String, Vec<usize>>,
+    primitives: Vec<GpuPrimitive>,
 }
 
 pub struct Mesh {
@@ -163,12 +169,17 @@ impl MyUniform {
     }
 }
 
-fn collect_paths(parent: &usvg::Group, paths: &mut Vec<usvg::Path>) {
+fn collect_paths(parent: &usvg::Group, paths: &mut Vec<(usvg::Path, String)>, id_attr: &str) {
     for node in parent.children() {
         if let usvg::Node::Group(ref group) = node {
-            collect_paths(group, paths);
+            let id_attr = if group.id().is_empty() {
+                id_attr
+            } else {
+                group.id()
+            };
+            collect_paths(group, paths, id_attr);
         } else if let usvg::Node::Path(ref p) = node {
-            paths.push(*p.to_owned());
+            paths.push((*p.to_owned(), id_attr.to_string()));
         }
     }
 }
@@ -178,11 +189,11 @@ impl<'a> SheetPipeline {
         // SVG
 
         let filename =
-            "/home/rasch/src/whstlrs/contrib/starofthecountydown/starofthecountydown.svg";
+            "/Users/david/src/whstlrs/contrib/starofthecountydown/starofthecountydown.svg";
         let mut fill_tess = FillTessellator::new();
         let mut stroke_tess = StrokeTessellator::new();
         let mut mesh: VertexBuffers<_, u32> = VertexBuffers::new();
-
+        let mut notes: HashMap<String, Vec<usize>> = HashMap::new();
         let fontdb = usvg::fontdb::Database::new();
         let opt = usvg::Options::default();
         let file_data = std::fs::read(filename).unwrap();
@@ -199,9 +210,9 @@ impl<'a> SheetPipeline {
             ty: f32::NAN,
         };
         let view_box = rtree.view_box();
-        let mut paths: Vec<usvg::Path> = Vec::new();
-        collect_paths(rtree.root(), &mut paths);
-        for p in paths {
+        let mut paths: Vec<(usvg::Path, String)> = Vec::new();
+        collect_paths(rtree.root(), &mut paths, "");
+        for (p, id_attr) in paths {
             let t = p.abs_transform();
             if t != prev_transform {
                 transforms.push(GpuTransform {
@@ -226,6 +237,11 @@ impl<'a> SheetPipeline {
                     color,
                     fill.opacity().get(),
                 ));
+
+                if !id_attr.is_empty() {
+                    let prim_id = primitives.len() - 1;
+                    (*notes.entry(id_attr).or_default()).push(prim_id);
+                }
 
                 fill_tess
                     .tessellate(
@@ -306,8 +322,9 @@ impl<'a> SheetPipeline {
                 module: &shader,
                 entry_point: "fs_main",
                 targets: &[Some(wgpu::ColorTargetState {
-                    //format: wgpu::TextureFormat::Bgra8Unorm,
-                    format: wgpu::TextureFormat::Rgba8UnormSrgb,
+                    //format: wgpu::TextureFormat::Bgra8Unorm,   // intel
+                    //format: wgpu::TextureFormat::Rgba8UnormSrgb, // rpi
+                    format: wgpu::TextureFormat::Bgra8UnormSrgb, // mac
                     blend: None,
                     write_mask: wgpu::ColorWrites::ALL,
                 })],
@@ -373,12 +390,30 @@ impl<'a> SheetPipeline {
             render_pipeline,
             mesh,
             uniform: myuniform,
+            notes,
+            primitives,
         }
     }
 
     pub fn update_time(&mut self, gpu: &mut Gpu, delta: Duration) {
         let d = delta.as_secs_f32();
-        println!("{:?}", d);
+        let mut notes = self
+            .notes
+            .iter()
+            .map(|x| (x.0.clone(), x.1.clone()))
+            .collect::<Vec<(String, Vec<usize>)>>();
+        notes.sort();
+        let notes_count = notes.len();
+        let idx = d as usize % notes_count;
+        let note = &notes[idx];
+        let prim_id = note.1[0];
+        let mut prims = self.primitives.clone();
+        let color: usvg::Color = Color::new_rgb(255, 0, 0);
+
+        prims[prim_id] = GpuPrimitive::new(prims[prim_id].transform, color, 0.0);
+        let _ = &gpu
+            .queue
+            .write_buffer(&self.uniform.prims_ssbo, 0, bytemuck::cast_slice(&prims));
     }
 
     pub fn render(
