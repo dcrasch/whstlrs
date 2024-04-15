@@ -188,16 +188,16 @@ impl<'a> SheetPipeline {
     pub fn new(gpu: &Gpu, transform_uniform: &Uniform<TransformUniform>) -> Self {
         // SVG
 
-        let filename =
-            "/Users/david/src/whstlrs/contrib/starofthecountydown/starofthecountydown.svg";
         let mut fill_tess = FillTessellator::new();
         let mut stroke_tess = StrokeTessellator::new();
         let mut mesh: VertexBuffers<_, u32> = VertexBuffers::new();
         let mut notes: HashMap<String, Vec<usize>> = HashMap::new();
         let fontdb = usvg::fontdb::Database::new();
         let opt = usvg::Options::default();
-        let file_data = std::fs::read(filename).unwrap();
-        let rtree = usvg::Tree::from_data(&file_data, &opt, &fontdb).unwrap();
+        //let file_data = std::fs::read(filename).unwrap();
+        let file_data =
+            include_bytes!("../../../../../contrib/starofthecountydown/starofthecountydown.svg");
+        let rtree = usvg::Tree::from_data(file_data, &opt, &fontdb).unwrap();
         let mut transforms = Vec::new();
         let mut primitives = Vec::new();
 
@@ -295,10 +295,16 @@ impl<'a> SheetPipeline {
                 push_constant_ranges: &[],
                 label: Some("pipeline layout"),
             });
-        let render_pipeline_descriptor = wgpu::RenderPipelineDescriptor {
-            label: Some("render pipeline descriptor"),
-            layout: Some(&pipeline_layout),
-            vertex: wgpu::VertexState {
+
+        let target = //wgpu_jumpstart::default_color_target_state(gpu.texture_format);
+	wgpu::ColorTargetState {
+                    format: gpu.texture_format,
+                    blend: None,
+                    write_mask: wgpu::ColorWrites::ALL,
+                };
+        let render_pipeline = wgpu::RenderPipelineDescriptor::builder(
+            pipeline_layout,
+            wgpu::VertexState {
                 module: &shader,
                 entry_point: "vs_main",
                 buffers: &[wgpu::VertexBufferLayout {
@@ -318,38 +324,9 @@ impl<'a> SheetPipeline {
                     ],
                 }],
             },
-            fragment: Some(wgpu::FragmentState {
-                module: &shader,
-                entry_point: "fs_main",
-                targets: &[Some(wgpu::ColorTargetState {
-                    //format: wgpu::TextureFormat::Bgra8Unorm,   // intel
-                    //format: wgpu::TextureFormat::Rgba8UnormSrgb, // rpi
-                    format: wgpu::TextureFormat::Bgra8UnormSrgb, // mac
-                    blend: None,
-                    write_mask: wgpu::ColorWrites::ALL,
-                })],
-            }),
-            primitive: wgpu::PrimitiveState {
-                topology: wgpu::PrimitiveTopology::TriangleList,
-                polygon_mode: wgpu::PolygonMode::Fill,
-                front_face: wgpu::FrontFace::Ccw,
-                strip_index_format: None,
-                cull_mode: None,
-                unclipped_depth: false,
-                conservative: false,
-            },
-            depth_stencil: None,
-            multisample: wgpu::MultisampleState {
-                count: 1,
-                mask: !0,
-                alpha_to_coverage_enabled: false,
-            },
-            multiview: None,
-        };
-
-        let render_pipeline = gpu
-            .device
-            .create_render_pipeline(&render_pipeline_descriptor);
+        )
+        .fragment("fs_main", &shader, &[Some(target)])
+        .create_render_pipeline(&gpu.device);
 
         let mesh = Mesh::new(&gpu.device, &mesh);
         let _ = &gpu.queue.write_buffer(
