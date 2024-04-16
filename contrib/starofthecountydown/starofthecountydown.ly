@@ -9,7 +9,9 @@
 	title = "Star Of The County Down"
       }
 
-
+\include "event-listener.ly"
+#(ly:set-option 'backend 'svg)
+\pointAndClickOff
 
 #(define (attrs-notehead grob)
      (let* ((origin (ly:input-file-line-char-column
