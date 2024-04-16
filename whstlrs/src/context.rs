@@ -1,9 +1,11 @@
+use crate::song::{Song, SongFile};
 use crate::utils::window::WindowState;
 use crate::WhstlrsEvent;
 use std::sync::Arc;
 use wgpu_jumpstart::{wgpu, Gpu, TransformUniform, Uniform};
 use winit::event_loop::EventLoopProxy;
 use winit::window::Window;
+
 pub struct Context {
     pub window: Arc<Window>,
     pub window_state: WindowState,
@@ -11,6 +13,7 @@ pub struct Context {
 
     pub transform: Uniform<TransformUniform>,
     pub proxy: EventLoopProxy<WhstlrsEvent>,
+    pub song: Song,
 }
 
 impl Context {
@@ -26,12 +29,21 @@ impl Context {
             wgpu::ShaderStages::VERTEX | wgpu::ShaderStages::FRAGMENT,
         );
 
+        let song_file = SongFile::from_str(
+            include_str!(
+                "../../contrib/starofthecountydown/starofthecountydown-unnamed-staff.notes"
+            ),
+            "starofthecountydown".to_string(),
+        );
+
+        println!("{:#?}", song_file);
         Self {
             window,
             window_state,
             gpu,
             transform: transform_uniform,
             proxy,
+            song: song_file.map(Song::new).unwrap(),
         }
     }
 

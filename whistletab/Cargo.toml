@@ -1,8 +1,0 @@
-[package]
-name = "whistletab"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-resvg = "0.40.0"
-usvg = "0.40.0"

@@ -24,11 +24,24 @@ pub const FALLBACK_COLOR: usvg::Color = usvg::Color {
     blue: 0,
 };
 
+pub struct NoteHeadState {
+}
+impl NoteHeadState {
+    pub fn new() -> Self {
+        Self {
+        }
+    }
+    pub fn color(&self) -> Color {
+        Color::new_rgb(255, 0, 0)
+    }
+}
+
 pub struct SheetPipeline {
     render_pipeline: wgpu::RenderPipeline,
     mesh: Mesh,
     uniform: MyUniform,
     notes: HashMap<String, Vec<usize>>,
+    notehead_states : HashMap<String, NoteHeadState>,
     primitives: Vec<GpuPrimitive>,
 }
 
@@ -296,12 +309,11 @@ impl<'a> SheetPipeline {
                 label: Some("pipeline layout"),
             });
 
-        let target = //wgpu_jumpstart::default_color_target_state(gpu.texture_format);
-	wgpu::ColorTargetState {
-                    format: gpu.texture_format,
-                    blend: None,
-                    write_mask: wgpu::ColorWrites::ALL,
-                };
+        let target = wgpu::ColorTargetState {
+            format: gpu.texture_format,
+            blend: None,
+            write_mask: wgpu::ColorWrites::ALL,
+        };
         let render_pipeline = wgpu::RenderPipelineDescriptor::builder(
             pipeline_layout,
             wgpu::VertexState {
@@ -363,11 +375,14 @@ impl<'a> SheetPipeline {
             }]),
         );
 
+        let mut notehead_states = HashMap::new();
+
         Self {
             render_pipeline,
             mesh,
             uniform: myuniform,
             notes,
+            notehead_states,
             primitives,
         }
     }
