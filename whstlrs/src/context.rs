@@ -13,7 +13,7 @@ pub struct Context {
 
     pub transform: Uniform<TransformUniform>,
     pub proxy: EventLoopProxy<WhstlrsEvent>,
-    pub song: Song,
+    pub song: Option<Song>,
 }
 
 impl Context {
@@ -29,21 +29,23 @@ impl Context {
             wgpu::ShaderStages::VERTEX | wgpu::ShaderStages::FRAGMENT,
         );
 
-        let song_file = SongFile::from_str(
+        let song_file = if let Ok(s) = SongFile::from_str(
             include_str!(
-                "../../contrib/starofthecountydown/starofthecountydown-unnamed-staff.notes"
+                "../../contrib/starofthecountydown/starofthecountydown.notes"
             ),
             "starofthecountydown".to_string(),
-        );
-
-        println!("{:#?}", song_file);
+        ) {
+            Some(s)
+        } else {
+            None
+        };
         Self {
             window,
             window_state,
             gpu,
             transform: transform_uniform,
             proxy,
-            song: song_file.map(Song::new).unwrap(),
+            song: song_file.map(Song::new),
         }
     }
 

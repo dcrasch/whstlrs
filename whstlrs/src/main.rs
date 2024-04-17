@@ -1,12 +1,13 @@
 mod context;
 mod render;
 mod scene;
-mod utils;
 mod song;
+mod utils;
 
 use crate::context::Context;
 
 use scene::{playing_scene, Scene};
+use song::{Song, SongFile};
 use std::sync::Arc;
 use std::time::Duration;
 use utils::window::WindowState;
@@ -31,7 +32,8 @@ struct Whstlrs {
 
 impl Whstlrs {
     fn new(mut context: Context, surface: Surface) -> Self {
-        let whistletab_scene = playing_scene::PlayingScene::new(&mut context);
+        let whistletab_scene =
+            playing_scene::PlayingScene::new(&context, context.song.clone().unwrap());
         context.resize();
         context.gpu.submit();
 

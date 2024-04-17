@@ -25,14 +25,25 @@ pub const FALLBACK_COLOR: usvg::Color = usvg::Color {
 };
 
 pub struct NoteHeadState {
+    active: bool,
 }
+
 impl NoteHeadState {
     pub fn new() -> Self {
-        Self {
-        }
+        Self { active: false }
     }
     pub fn color(&self) -> Color {
-        Color::new_rgb(255, 0, 0)
+        if self.active {
+            Color::new_rgb(0, 0, 255)
+        } else {
+            Color::new_rgb(0, 0, 0)
+        }
+    }
+    pub fn set_active(&mut self) {
+        self.active = true;
+    }
+    pub fn set_inactive(&mut self) {
+        self.active = false;
     }
 }
 
@@ -41,7 +52,7 @@ pub struct SheetPipeline {
     mesh: Mesh,
     uniform: MyUniform,
     notes: HashMap<String, Vec<usize>>,
-    notehead_states : HashMap<String, NoteHeadState>,
+    pub notehead_states: HashMap<String, NoteHeadState>,
     primitives: Vec<GpuPrimitive>,
 }
 
@@ -375,7 +386,10 @@ impl<'a> SheetPipeline {
             }]),
         );
 
-        let mut notehead_states = HashMap::new();
+        let mut notehead_states = notes
+            .keys()
+            .map(|k| (k.to_string(), NoteHeadState { active: false }))
+            .collect::<HashMap<String, NoteHeadState>>();
 
         Self {
             render_pipeline,
@@ -387,29 +401,25 @@ impl<'a> SheetPipeline {
         }
     }
 
-    pub fn update_time(&mut self, gpu: &mut Gpu, delta: Duration) {
-        let d = delta.as_secs_f32();
-        let mut notes = self
-            .notes
-            .iter()
-            .map(|x| {
-                let idx: Vec<u32> = x.0.split('-').flat_map(str::parse).collect();
-
-                (idx[0], idx[1], x.1.clone())
-            })
-            .collect::<Vec<(u32, u32, Vec<usize>)>>();
-        notes.sort();
-        let notes_count = notes.len();
-        let idx = d as usize % notes_count;
-        let note = &notes[idx];
-        let prim_id = note.2[0];
+    pub fn update_time(&mut self, gpu: &mut Gpu, _delta: Duration) {
         let mut prims = self.primitives.clone();
-        let color: usvg::Color = Color::new_rgb(255, 0, 0);
 
-        prims[prim_id] = GpuPrimitive::new(prims[prim_id].transform, color, 0.0);
+        for (id_attr, notehead) in self.notehead_states.iter() {
+            if let Some(prim_ids) = self.notes.get(id_attr) {
+                let color: usvg::Color = notehead.color();
+                for &prim_id in prim_ids {
+                    prims[prim_id] = GpuPrimitive::new(prims[prim_id].transform, color, 0.0);
+                }
+            }
+        }
+
         let _ = &gpu
             .queue
             .write_buffer(&self.uniform.prims_ssbo, 0, bytemuck::cast_slice(&prims));
+    }
+
+    pub fn notehead_states_mut(&mut self) -> &mut HashMap<String, NoteHeadState> {
+        &mut self.notehead_states
     }
 
     pub fn render(

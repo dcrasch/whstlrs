@@ -3,11 +3,21 @@ use std::path::Path;
 
 #[derive(Debug, Clone)]
 pub struct SongNote {
-    pub moment: f32,
+    pub timestamp: f32,
     pub midi_key: u32,
     pub duration: u32,
     pub duration_length: f32,
     pub notehead_id: String,
+}
+
+#[derive(Debug, Clone)]
+pub struct SongEvent {
+    pub timestamp: f32,
+    pub midi_key: u32,
+    pub duration_length: f32,
+    pub notehead_id: String,
+    pub wrong: bool,
+    //midi event
 }
 
 #[derive(Debug, Clone)]
@@ -52,21 +62,18 @@ impl SongFile {
             .delimiter(b'\t')
             .from_reader(text.as_bytes());
         let mut notes: Vec<SongNote> = Vec::new();
-
         for record in reader.records() {
             if let Ok(record) = record {
                 match &record[1] {
                     "note" => {
-                        let notehead_ids = record[5]
-                            .split(' ')
-                            .flat_map(str::parse)
-                            .collect::<Vec<u32>>();
+                        let timestamp = record[0].parse::<f32>().expect("duration length");
+                        let duration_length = record[4].parse::<f32>().expect("duration length");
                         let note = SongNote {
-                            moment: record[0].parse::<f32>().expect("moment"),
+                            timestamp,
                             midi_key: record[2].parse::<u32>().expect("pitch"),
                             duration: record[3].parse::<u32>().expect("duration"),
-                            duration_length: record[4].parse::<f32>().expect("duration length"),
-                            notehead_id: format!("Note-{}-{}", notehead_ids[0], notehead_ids[1]),
+                            duration_length,
+                            notehead_id: record[5].to_string(),
                         };
                         notes.push(note);
                     }
