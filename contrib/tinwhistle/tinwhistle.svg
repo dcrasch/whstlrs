@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-2937 -12970 1524 36830" width="1524" height="36830" xmlns="http://www.w3.org/2000/svg">
+  <g class="tinwhistle">
+  <g class="barrel">
+    <path fill="none" stroke="rgb(0,0,0)" stroke-width="102" stroke-linejoin="round" d="M -2175,23860 L -2810,23860 -2810,-9160 -1540,-9160 -1540,23860 -2175,23860 Z"/>
+  </g>
+  <g class="mouthpiece">
+    <path fill="none" stroke="rgb(0,0,0)" stroke-width="102" stroke-linejoin="round" d="M -2175,-5985 L -2937,-5985 -2937,-12970 -1413,-12970 -1413,-5985 -2175,-5985 Z"/>
+  </g>
+  <g class="fingerhole-1">
+    <path fill="none" stroke="rgb(0,0,0)" stroke-width="102" stroke-linejoin="round" d="M -2175,1266 C -2038,1266 -1933,1371 -1933,1508 -1933,1645 -2038,1750 -2175,1750 -2312,1750 -2417,1645 -2417,1508 -2417,1371 -2312,1266 -2175,1266 Z"/>
+  </g>
+  <g class="fingerhole-2">
+    <path fill="none" stroke="rgb(0,0,0)" stroke-width="102" stroke-linejoin="round" d="M -2175,3946 C -1973,3946 -1819,4100 -1819,4302 -1819,4504 -1973,4658 -2175,4658 -2377,4658 -2531,4504 -2531,4302 -2531,4100 -2377,3946 -2175,3946 Z"/>
+  </g>
+  <g class="fingerhole-3">
+    <path fill="none" stroke="rgb(0,0,0)" stroke-width="102" stroke-linejoin="round" d="M -2175,6296 C -2082,6296 -2010,6368 -2010,6461 -2010,6554 -2082,6626 -2175,6626 -2268,6626 -2340,6554 -2340,6461 -2340,6368 -2268,6296 -2175,6296 Z"/>
+  </g>
+  <g class="fingerhole-4">
+    <path fill="none" stroke="rgb(0,0,0)" stroke-width="102" stroke-linejoin="round" d="M -2175,9229 C -2016,9229 -1895,9350 -1895,9509 -1895,9668 -2016,9789 -2175,9789 -2334,9789 -2455,9668 -2455,9509 -2455,9350 -2334,9229 -2175,9229 Z"/>
+  </g>
+  <g class="fingerhole-5">
+    <path fill="none" stroke="rgb(0,0,0)" stroke-width="102" stroke-linejoin="round" d="M -2175,12112 C -1995,12112 -1857,12250 -1857,12430 -1857,12610 -1995,12748 -2175,12748 -2355,12748 -2493,12610 -2493,12430 -2493,12250 -2355,12112 -2175,12112 Z"/>
+  </g>
+  <g class="fingerhole-6">
+    <path fill="none" stroke="rgb(0,0,0)" stroke-width="102" stroke-linejoin="round" d="M -2175,14397 C -1995,14397 -1857,14534 -1857,14714 -1857,14894 -1995,15032 -2175,15032 -2355,15032 -2493,14894 -2493,14714 -2493,14534 -2355,14397 -2175,14397 Z"/>
+  </g>
+  </g>
+</svg>
