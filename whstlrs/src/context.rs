@@ -30,9 +30,7 @@ impl Context {
         );
 
         let song_file = if let Ok(s) = SongFile::from_str(
-            include_str!(
-                "../../contrib/starofthecountydown/starofthecountydown.notes"
-            ),
+            include_str!("../../contrib/starofthecountydown/starofthecountydown.notes"),
             "starofthecountydown".to_string(),
         ) {
             Some(s)

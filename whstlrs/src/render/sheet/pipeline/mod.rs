@@ -24,6 +24,7 @@ pub const FALLBACK_COLOR: usvg::Color = usvg::Color {
     blue: 0,
 };
 
+#[derive(Debug)]
 pub struct NoteHeadState {
     active: bool,
 }
@@ -47,12 +48,37 @@ impl NoteHeadState {
     }
 }
 
+#[derive(Debug)]
+pub struct FingerHolestate {
+    active: bool,
+}
+
+impl FingerHolestate {
+    pub fn new() -> Self {
+        Self { active: false }
+    }
+    pub fn color(&self) -> Color {
+        if self.active {
+            Color::new_rgb(255, 0, 0)
+        } else {
+            Color::new_rgb(255, 255, 255)
+        }
+    }
+    pub fn set_active(&mut self) {
+        self.active = true;
+    }
+    pub fn set_inactive(&mut self) {
+        self.active = false;
+    }
+}
+
 pub struct SheetPipeline {
     render_pipeline: wgpu::RenderPipeline,
     mesh: Mesh,
     uniform: MyUniform,
-    notes: HashMap<String, Vec<usize>>,
+    groups: HashMap<String, Vec<usize>>,
     pub notehead_states: HashMap<String, NoteHeadState>,
+    pub fingerhole_states: HashMap<String, FingerHolestate>,
     primitives: Vec<GpuPrimitive>,
 }
 
@@ -196,10 +222,10 @@ impl MyUniform {
 fn collect_paths(parent: &usvg::Group, paths: &mut Vec<(usvg::Path, String)>, id_attr: &str) {
     for node in parent.children() {
         if let usvg::Node::Group(ref group) = node {
-            let id_attr = if group.id().is_empty() {
-                id_attr
-            } else {
+            let id_attr = if group.id().starts_with("Note-") || group.id().starts_with("finger") {
                 group.id()
+            } else {
+                id_attr
             };
             collect_paths(group, paths, id_attr);
         } else if let usvg::Node::Path(ref p) = node {
@@ -215,12 +241,12 @@ impl<'a> SheetPipeline {
         let mut fill_tess = FillTessellator::new();
         let mut stroke_tess = StrokeTessellator::new();
         let mut mesh: VertexBuffers<_, u32> = VertexBuffers::new();
-        let mut notes: HashMap<String, Vec<usize>> = HashMap::new();
+        let mut groups: HashMap<String, Vec<usize>> = HashMap::new();
         let fontdb = usvg::fontdb::Database::new();
         let opt = usvg::Options::default();
         //let file_data = std::fs::read(filename).unwrap();
         let file_data =
-            include_bytes!("../../../../../contrib/starofthecountydown/starofthecountydown.svg");
+            include_bytes!("../../../../../contrib/starofthecountydown/starofthecountydown2.svg");
         let rtree = usvg::Tree::from_data(file_data, &opt, &fontdb).unwrap();
         let mut transforms = Vec::new();
         let mut primitives = Vec::new();
@@ -264,7 +290,7 @@ impl<'a> SheetPipeline {
 
                 if !id_attr.is_empty() {
                     let prim_id = primitives.len() - 1;
-                    (*notes.entry(id_attr).or_default()).push(prim_id);
+                    (*groups.entry(id_attr).or_default()).push(prim_id);
                 }
 
                 fill_tess
@@ -386,17 +412,23 @@ impl<'a> SheetPipeline {
             }]),
         );
 
-        let mut notehead_states = notes
+        let notehead_states = groups
             .keys()
+            .filter(|k| k.starts_with("Note-"))
             .map(|k| (k.to_string(), NoteHeadState { active: false }))
             .collect::<HashMap<String, NoteHeadState>>();
-
+        let fingerhole_states = groups
+            .keys()
+            .filter(|k| k.starts_with("fingerhole-"))
+            .map(|k| (k.to_string(), FingerHolestate { active: false }))
+            .collect::<HashMap<String, FingerHolestate>>();
         Self {
             render_pipeline,
             mesh,
             uniform: myuniform,
-            notes,
+            groups,
             notehead_states,
+            fingerhole_states,
             primitives,
         }
     }
@@ -405,8 +437,17 @@ impl<'a> SheetPipeline {
         let mut prims = self.primitives.clone();
 
         for (id_attr, notehead) in self.notehead_states.iter() {
-            if let Some(prim_ids) = self.notes.get(id_attr) {
+            if let Some(prim_ids) = self.groups.get(id_attr) {
                 let color: usvg::Color = notehead.color();
+                for &prim_id in prim_ids {
+                    prims[prim_id] = GpuPrimitive::new(prims[prim_id].transform, color, 0.0);
+                }
+            }
+        }
+
+        for (id_attr, fingerhole) in self.fingerhole_states.iter() {
+            if let Some(prim_ids) = self.groups.get(id_attr) {
+                let color: usvg::Color = fingerhole.color();
                 for &prim_id in prim_ids {
                     prims[prim_id] = GpuPrimitive::new(prims[prim_id].transform, color, 0.0);
                 }
@@ -420,6 +461,10 @@ impl<'a> SheetPipeline {
 
     pub fn notehead_states_mut(&mut self) -> &mut HashMap<String, NoteHeadState> {
         &mut self.notehead_states
+    }
+
+    pub fn fingerhole_states_mut(&mut self) -> &mut HashMap<String, FingerHolestate> {
+        &mut self.fingerhole_states
     }
 
     pub fn render(
