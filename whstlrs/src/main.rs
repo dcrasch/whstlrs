@@ -7,7 +7,6 @@ mod utils;
 use crate::context::Context;
 
 use scene::{playing_scene, Scene};
-use song::{Song, SongFile};
 use std::sync::Arc;
 use std::time::Duration;
 use utils::window::WindowState;
