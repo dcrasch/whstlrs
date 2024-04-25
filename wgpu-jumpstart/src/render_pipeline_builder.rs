@@ -38,7 +38,7 @@ impl<'a> RenderPipelineBuilder<'a> for wgpu::RenderPipelineDescriptor<'a> {
             primitive: wgpu::PrimitiveState::default(),
             depth_stencil: None,
             multisample: wgpu::MultisampleState {
-                count: 1,
+                count: 4,
                 mask: !0,
                 alpha_to_coverage_enabled: false,
             },

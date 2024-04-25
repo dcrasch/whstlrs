@@ -387,7 +387,7 @@ impl<'a> SheetPipeline {
             &gpu.queue
                 .write_buffer(&myuniform.prims_ssbo, 0, bytemuck::cast_slice(&primitives));
 
-        const WINDOW_SIZE: f32 = 800.0;
+        const WINDOW_SIZE: f32 = 1280.0;
         let vb_width = view_box.rect.size().width() as f32;
         let vb_height = view_box.rect.size().height() as f32;
         let scale = vb_width / vb_height;
@@ -397,9 +397,8 @@ impl<'a> SheetPipeline {
         } else {
             (WINDOW_SIZE, WINDOW_SIZE / scale)
         };
-
-        let pan = [vb_width / -2.0, vb_height / -2.0];
-        let zoom = 2.0 / f32::max(vb_width, vb_height);
+        let pan = [vb_width / -3.0, vb_height / -2.0];
+        let zoom = 4.0 / f32::max(vb_width, vb_height);
 
         let _ = &gpu.queue.write_buffer(
             &myuniform.globals_ubo,

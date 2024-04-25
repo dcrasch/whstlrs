@@ -10,6 +10,7 @@ use scene::{playing_scene, Scene};
 use std::sync::Arc;
 use std::time::Duration;
 use utils::window::WindowState;
+use wgpu_jumpstart::wgpu::TextureView;
 use wgpu_jumpstart::{wgpu, Surface};
 use wgpu_jumpstart::{Gpu, TransformUniform};
 use winit::{
@@ -25,6 +26,7 @@ pub enum WhstlrsEvent {
 struct Whstlrs {
     context: Context,
     surface: Surface,
+    msaa_texture: Option<TextureView>,
     game_scene: Box<dyn Scene>,
     last_time: std::time::Instant,
 }
@@ -36,9 +38,32 @@ impl Whstlrs {
         context.resize();
         context.gpu.submit();
 
+        let mut msaa_texture = Some(
+            context
+                .gpu
+                .device
+                .create_texture(&wgpu::TextureDescriptor {
+                    label: Some("Multisampled frame descriptor"),
+                    size: wgpu::Extent3d {
+                        width: 1080,
+                        height: 720,
+                        depth_or_array_layers: 1,
+                    },
+                    mip_level_count: 1,
+                    sample_count: 4,
+                    dimension: wgpu::TextureDimension::D2,
+                    format: context.gpu.texture_format,
+                    usage: wgpu::TextureUsages::RENDER_ATTACHMENT,
+                    view_formats: &[],
+                })
+                .create_view(&wgpu::TextureViewDescriptor::default()),
+        );
+        //msaa_texture = None;
+
         Self {
             context,
             surface,
+            msaa_texture: msaa_texture,
             game_scene: Box::new(whistletab_scene),
             last_time: std::time::Instant::now(),
         }
@@ -120,11 +145,9 @@ impl Whstlrs {
             let swap_chain_output = self.surface.get_current_texture();
             match swap_chain_output {
                 Ok(s) => break s,
-                Err(err) => log::warn!("{:?}", err),
+                Err(err) => log::warn!("deze {:?}", err),
             }
         };
-
-        // TODO msaa
 
         let view = &frame
             .texture
@@ -139,8 +162,12 @@ impl Whstlrs {
                     .begin_render_pass(&wgpu::RenderPassDescriptor {
                         label: Some("Main Whstlrs Pass"),
                         color_attachments: &[Some(wgpu::RenderPassColorAttachment {
-                            view,
-                            resolve_target: None,
+                            view: self.msaa_texture.as_ref().unwrap_or(view),
+                            resolve_target: if self.msaa_texture.is_some() {
+                                Some(&view)
+                            } else {
+                                None
+                            },
                             ops: wgpu::Operations {
                                 load: wgpu::LoadOp::Clear(bg_color),
                                 store: wgpu::StoreOp::Store,
