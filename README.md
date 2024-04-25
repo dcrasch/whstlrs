@@ -16,20 +16,26 @@ It helps people to practice song on a MIDI wind controller.
 * https://www.rust-lang.org/
 * https://lilypond.org/ for sheet music
 
-## Libraries
+## Graphics libraries
 
 * https://wgpu.rs/
 * https://github.com/RazrFalcon/resvg
+* https://github.com/nical/lyon/
+
+## Music libraries
+
 * https://github.com/kovaxis/midly
 * https://github.com/Boddlnagg/midir
 
-## Other tools
+## Other graphics tools
+
+* https://inkscape.org/
+
+## Other music tools
 
 * https://abcnotation.com/
 * https://lilypond.org/
-* https://inkscape.org/
-
-
+* https://en.wikipedia.org/wiki/Tin_whistle
 ## Inspiration
 
 * https://charleslabs.fr/en/project-Irish+Whistle+Tab+-+Android+app
