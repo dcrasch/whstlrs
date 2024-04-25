@@ -84,6 +84,28 @@ impl Whstlrs {
 
         match &event {
             WindowEvent::Resized(_) => {
+                let mut msaa_texture = Some(
+                    self.context
+                        .gpu
+                        .device
+                        .create_texture(&wgpu::TextureDescriptor {
+                            label: Some("Multisampled frame descriptor"),
+                            size: wgpu::Extent3d {
+                                width: self.context.window_state.physical_size.width,
+                                height: self.context.window_state.physical_size.height,
+                                depth_or_array_layers: 1,
+                            },
+                            mip_level_count: 1,
+                            sample_count: 4,
+                            dimension: wgpu::TextureDimension::D2,
+                            format: self.context.gpu.texture_format,
+                            usage: wgpu::TextureUsages::RENDER_ATTACHMENT,
+                            view_formats: &[],
+                        })
+                        .create_view(&wgpu::TextureViewDescriptor::default()),
+                );
+                self.msaa_texture = msaa_texture;
+
                 self.surface.resize_swap_chain(
                     &self.context.gpu.device,
                     self.context.window_state.physical_size.width,
