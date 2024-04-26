@@ -16,6 +16,20 @@ It helps people to practice song on a MIDI wind controller.
 * https://www.rust-lang.org/
 * https://lilypond.org/ for sheet music
 
+## Show log
+
+Bash:
+```
+RUST_LOG=info ./cargo run
+```
+
+Powershell:
+```
+$Env:RUST_LOG = "info"
+cargo run
+```
+
+
 ## Graphics libraries
 
 * https://wgpu.rs/
@@ -36,6 +50,7 @@ It helps people to practice song on a MIDI wind controller.
 * https://abcnotation.com/
 * https://lilypond.org/
 * https://en.wikipedia.org/wiki/Tin_whistle
+
 ## Inspiration
 
 * https://charleslabs.fr/en/project-Irish+Whistle+Tab+-+Android+app
