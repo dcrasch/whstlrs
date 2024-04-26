@@ -50,6 +50,7 @@ cargo run
 * https://abcnotation.com/
 * https://lilypond.org/
 * https://en.wikipedia.org/wiki/Tin_whistle
+* https://www.frescobaldi.org/
 
 ## Inspiration
 
