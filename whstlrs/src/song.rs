@@ -48,10 +48,12 @@ impl PlaybackState {
         }
     }
     pub fn update(&mut self, delta: Duration) -> Vec<&MidiEvent> {
+        self.running += delta;
         let events = self.song.file.events[self.song_state.seen_events..]
             .iter()
             .take_while(|event| event.timestamp <= self.running)
-            .inspect(|_| self.song_state.seen_events += 1);
+            .inspect(|_| self.song_state.seen_events += 1)
+            .collect();
 
         events
     }

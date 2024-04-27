@@ -15,7 +15,6 @@ use crate::render::SheetRenderer;
 
 pub struct PlayingScene {
     sheet: SheetRenderer,
-    song: Song,
     player: MidiPlayer,
 }
 
@@ -26,14 +25,14 @@ impl PlayingScene {
         let player = MidiPlayer::new(song);
         Self {
             sheet,
-            song: song.clone(),
             player,
         }
     }
 
     fn update_song_player(&mut self, ctx: &Context, delta: Duration) -> f32 {
-        let d = delta.as_secs_f32() / 4.0;
+        let d = delta.as_secs_f32() * 4.0;
 
+        /*
         // TODO move to update;
         let events: Vec<SongEvent> = self
             .song
@@ -61,7 +60,8 @@ impl PlayingScene {
             })
             .collect();
         self.sheet.song_events(&events);
-        self.player.update(delta);
+        */
+        self.player.update(Duration::from_secs_f32(d));
         d
     }
 }
