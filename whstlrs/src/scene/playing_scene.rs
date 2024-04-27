@@ -30,8 +30,6 @@ impl PlayingScene {
     }
 
     fn update_song_player(&mut self, ctx: &Context, delta: Duration) -> f32 {
-        let d = delta.as_secs_f32() * 4.0;
-
         /*
         // TODO move to update;
         let events: Vec<SongEvent> = self
@@ -61,14 +59,14 @@ impl PlayingScene {
             .collect();
         self.sheet.song_events(&events);
         */
-        self.player.update(Duration::from_secs_f32(d));
-        d
+        let e = self.player.update(delta);
+        0.0
     }
 }
 
 impl Scene for PlayingScene {
     fn update(&mut self, ctx: &mut Context, delta: std::time::Duration) {
-        self.sheet.update_time(&mut ctx.gpu, delta);
+        self.sheet.update_time(&mut ctx.gpu);
 
         let time = self.update_song_player(ctx, delta);
     }

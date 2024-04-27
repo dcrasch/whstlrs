@@ -22,8 +22,8 @@ impl SheetRenderer {
         Self { sheet_pipeline }
     }
 
-    pub fn update_time(&mut self, gpu: &mut Gpu, delta: Duration) {
-        self.sheet_pipeline.update_time(gpu, delta);
+    pub fn update_time(&mut self, gpu: &mut Gpu) {
+        self.sheet_pipeline.update_time(gpu);
     }
 
     pub fn render<'rpass>(

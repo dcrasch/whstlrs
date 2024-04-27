@@ -432,7 +432,7 @@ impl<'a> SheetPipeline {
         }
     }
 
-    pub fn update_time(&mut self, gpu: &mut Gpu, _delta: Duration) {
+    pub fn update_time(&mut self, gpu: &mut Gpu) {
         let mut prims = self.primitives.clone();
 
         for (id_attr, notehead) in self.notehead_states.iter() {

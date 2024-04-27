@@ -148,6 +148,7 @@ impl Whstlrs {
             },
             WindowEvent::RedrawRequested => {
                 let delta = self.last_time.elapsed();
+                self.last_time = std::time::Instant::now();
 
                 self.update(delta);
                 self.render();

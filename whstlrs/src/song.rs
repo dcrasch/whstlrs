@@ -123,9 +123,13 @@ impl SongFile {
                         };
                         notes.push(note);
 
+                        let timestamp_on = std::time::Duration::from_secs_f32(timestamp);
+                        let timestamp_off = std::time::Duration::from_secs_f32(
+                            timestamp + duration_length,
+                        );
                         let event = MidiEvent {
                             channel: 0,
-                            timestamp: std::time::Duration::from_secs_f32(timestamp),
+                            timestamp: timestamp_on,
                             message: MidiMessage::NoteOn {
                                 key: u7::new(midi_key),
                                 vel: u7::new(127),
@@ -134,9 +138,7 @@ impl SongFile {
                         events.push(event);
                         let event = MidiEvent {
                             channel: 0,
-                            timestamp: std::time::Duration::from_secs_f32(
-                                timestamp + duration_length,
-                            ),
+                            timestamp: timestamp_off,
                             message: MidiMessage::NoteOff {
                                 key: u7::new(midi_key),
                                 vel: u7::new(0),
