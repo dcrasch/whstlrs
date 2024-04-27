@@ -1,3 +1,4 @@
+pub mod midi_player;
 pub mod playing_scene;
 
 use crate::context::Context;

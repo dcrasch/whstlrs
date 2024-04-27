@@ -1,4 +1,5 @@
 mod context;
+mod output_manager;
 mod render;
 mod scene;
 mod song;

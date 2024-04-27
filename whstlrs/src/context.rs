@@ -1,3 +1,4 @@
+use crate::output_manager::OutputConnection;
 use crate::song::{Song, SongFile};
 use crate::utils::window::WindowState;
 use crate::WhstlrsEvent;
@@ -14,6 +15,7 @@ pub struct Context {
     pub transform: Uniform<TransformUniform>,
     pub proxy: EventLoopProxy<WhstlrsEvent>,
     pub song: Option<Song>,
+    pub output_connection: OutputConnection,
 }
 
 impl Context {
@@ -44,6 +46,7 @@ impl Context {
             transform: transform_uniform,
             proxy,
             song: song_file.map(Song::new),
+            output_connection: OutputConnection::new(),
         }
     }
 

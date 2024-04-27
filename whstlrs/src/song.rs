@@ -1,10 +1,21 @@
-use std::fs;
 use std::path::Path;
+use std::{fs, time::Duration};
+
+use midly::{num::u4, MidiMessage, TrackEvent, TrackEventKind};
+
+#[derive(Debug, Clone)]
+pub struct MidiEvent {
+    pub channel: u8,
+    pub timestamp: Duration,
+    pub message: MidiMessage,
+    pub track_id: usize,
+    pub track_color_id: usize,
+}
 
 #[derive(Debug, Clone)]
 pub struct SongNote {
     pub timestamp: f32,
-    pub midi_key: u32,
+    pub midi_key: u8,
     pub duration: u32,
     pub duration_length: f32,
     pub notehead_id: String,
@@ -13,11 +24,10 @@ pub struct SongNote {
 #[derive(Debug, Clone)]
 pub struct SongEvent {
     pub timestamp: f32,
-    pub midi_key: u32,
+    pub midi_key: u8,
     pub duration_length: f32,
     pub notehead_id: String,
     pub wrong: bool,
-    //midi event
 }
 
 #[derive(Debug, Clone)]
@@ -70,7 +80,7 @@ impl SongFile {
                         let duration_length = record[4].parse::<f32>().expect("duration length");
                         let note = SongNote {
                             timestamp,
-                            midi_key: record[2].parse::<u32>().expect("pitch"),
+                            midi_key: record[2].parse::<u8>().expect("pitch"),
                             duration: record[3].parse::<u32>().expect("duration"),
                             duration_length,
                             notehead_id: record[5].to_string(),

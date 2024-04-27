@@ -53,7 +53,7 @@ impl SheetRenderer {
         }
     }
 
-    pub fn midi2note(&self, midi_key: u32) -> &str {
+    pub fn midi2note(&self, midi_key: u8) -> &str {
         match midi_key {
             62 => "D",
             64 => "E",
