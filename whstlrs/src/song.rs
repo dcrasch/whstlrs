@@ -1,15 +1,15 @@
 use std::path::Path;
+use std::sync::Arc;
 use std::{fs, time::Duration};
 
-use midly::{num::u4, MidiMessage, TrackEvent, TrackEventKind};
+use midly::{num::u7, MidiMessage};
+use winit::keyboard;
 
 #[derive(Debug, Clone)]
 pub struct MidiEvent {
     pub channel: u8,
     pub timestamp: Duration,
     pub message: MidiMessage,
-    pub track_id: usize,
-    pub track_color_id: usize,
 }
 
 #[derive(Debug, Clone)]
@@ -30,6 +30,34 @@ pub struct SongEvent {
     pub wrong: bool,
 }
 
+pub struct PlaybackState {
+    song: Arc<Song>,
+    song_state: Box<SongState>,
+    running: Duration,
+}
+struct SongState {
+    seen_events: usize,
+}
+
+impl PlaybackState {
+    pub fn new(song: Arc<Song>) -> Self {
+        PlaybackState {
+            song,
+            song_state : SongState { seen_events:0}.into(),
+            running : Duration::ZERO
+        }
+    }
+    pub fn update(&mut self, delta: Duration) -> Vec<&MidiEvent> {
+        let events = self.song.file.events[self.song_state.seen_events..]
+            .iter()
+            .take_while(|event| event.timestamp <= self.running)
+            .inspect(|_| self.song_state.seen_events += 1);
+
+        events
+    }
+}
+
+
 #[derive(Debug, Clone)]
 pub struct Song {
     pub file: SongFile,
@@ -46,6 +74,7 @@ impl Song {
 pub struct SongFile {
     pub name: String,
     pub notes: Vec<SongNote>,
+    pub events: Vec<MidiEvent>,
 }
 
 impl SongFile {
@@ -72,20 +101,46 @@ impl SongFile {
             .delimiter(b'\t')
             .from_reader(text.as_bytes());
         let mut notes: Vec<SongNote> = Vec::new();
+        let mut events: Vec<MidiEvent> = Vec::new();
         for record in reader.records() {
             if let Ok(record) = record {
                 match &record[1] {
                     "note" => {
                         let timestamp = record[0].parse::<f32>().expect("duration length");
                         let duration_length = record[4].parse::<f32>().expect("duration length");
+                        let midi_key = record[2].parse::<u8>().expect("pitch");
+                        let duration = record[3].parse::<u32>().expect("duration");
+                        let notehead_id = record[5].to_string();
+
                         let note = SongNote {
                             timestamp,
-                            midi_key: record[2].parse::<u8>().expect("pitch"),
-                            duration: record[3].parse::<u32>().expect("duration"),
+                            midi_key,
+                            duration,
                             duration_length,
-                            notehead_id: record[5].to_string(),
+                            notehead_id,
                         };
                         notes.push(note);
+
+                        let event = MidiEvent {
+                            channel: 0,
+                            timestamp: std::time::Duration::from_secs_f32(timestamp),
+                            message: MidiMessage::NoteOn {
+                                key: u7::new(midi_key),
+                                vel: u7::new(127),
+                            },
+                        };
+                        events.push(event);
+                        let event = MidiEvent {
+                            channel: 0,
+                            timestamp: std::time::Duration::from_secs_f32(
+                                timestamp + duration_length,
+                            ),
+                            message: MidiMessage::NoteOff {
+                                key: u7::new(midi_key),
+                                vel: u7::new(0),
+                            },
+                        };
+                        events.push(event);
                     }
                     _ => (),
                 }
@@ -94,6 +149,7 @@ impl SongFile {
         Ok(Self {
             name: name.to_string(),
             notes,
+            events,
         })
     }
 }

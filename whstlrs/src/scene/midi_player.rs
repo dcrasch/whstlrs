@@ -1,24 +1,24 @@
-use midly::{num::u4, MidiMessage};
 use std::time::Duration;
 
-use crate::{
-    output_manager::OutputConnection,
-    song::{MidiEvent, Song, SongEvent},
-};
+use midly::num::u4;
+
+use crate::{output_manager::OutputConnection, song::{MidiEvent, PlaybackState, Song}};
 
 pub struct MidiPlayer {
     output: OutputConnection,
+    playback : PlaybackState,
 }
 impl MidiPlayer {
-    pub fn new() -> Self {
+    pub fn new(song: Song) -> Self {
         let output = OutputConnection::new();
-        MidiPlayer { output }
+        MidiPlayer { output, playback: PlaybackState::new(song.into()) }
     }
 
-    pub fn song_events(&mut self, messages: &[MidiMessage]) {
-        for message in messages {
-            println!("{:#?}", message);
-            self.output.midi_event(u4::new(1), *message);
-        }
+    pub fn update(&mut self, delta: Duration) -> Vec<&MidiEvent> {
+        let events = self.playback.update(delta);
+        events.iter().for_each(|event| {
+            self.output.midi_event(u4::new(event.channel), event.message);
+        });
+        events
     }
 }

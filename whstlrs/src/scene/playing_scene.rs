@@ -21,9 +21,9 @@ pub struct PlayingScene {
 
 impl PlayingScene {
     pub fn new(ctx: &Context, song: Song) -> Self {
-        let mut sheet = SheetRenderer::new(&ctx.gpu, &ctx.transform);
+        let sheet = SheetRenderer::new(&ctx.gpu, &ctx.transform);
 
-        let player = MidiPlayer::new();
+        let player = MidiPlayer::new(song);
         Self {
             sheet,
             song: song.clone(),
@@ -33,6 +33,8 @@ impl PlayingScene {
 
     fn update_song_player(&mut self, ctx: &Context, delta: Duration) -> f32 {
         let d = delta.as_secs_f32() / 4.0;
+
+        // TODO move to update;
         let events: Vec<SongEvent> = self
             .song
             .file
@@ -58,29 +60,8 @@ impl PlayingScene {
                 }
             })
             .collect();
-        let messages = self
-            .song
-            .file
-            .notes
-            .iter()
-            .filter_map(|n| {
-                if (d - n.timestamp).abs() <= 0.01 {
-                    Some(MidiMessage::NoteOn {
-                        key: u7::new(n.midi_key),
-                        vel: u7::new(127),
-                    })
-                } else if (d - n.timestamp - n.duration_length).abs() <= 0.01 {
-                    Some(MidiMessage::NoteOff {
-                        key: u7::new(n.midi_key),
-                        vel: u7::new(127),
-                    })
-                } else {
-                    None
-                }
-            })
-            .collect::<Vec<MidiMessage>>();
         self.sheet.song_events(&events);
-        self.player.song_events(&messages);
+        self.player.update(delta);
         d
     }
 }

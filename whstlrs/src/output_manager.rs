@@ -13,7 +13,7 @@ impl OutputConnection {
         let conn_out = midi_out.connect(out_port, "midir-test").unwrap();
         OutputConnection { conn_out }
     }
-    pub fn midi_event(&mut self, channel: u4, msg: MidiMessage) {
+    pub fn midi_event(&mut self, _channel: u4, msg: MidiMessage) {
         let (msg, key, velocity) = match msg {
             MidiMessage::NoteOn { vel, key } => (0x90, key.as_int(), vel.as_int()),
             MidiMessage::NoteOff { vel, key } => (0x80, key.as_int(), vel.as_int()),
