@@ -3,6 +3,7 @@ use std::time::Duration;
 
 use crate::song::SongEvent;
 use crate::TransformUniform;
+use midly::MidiMessage;
 use wgpu_jumpstart::wgpu;
 use wgpu_jumpstart::Gpu;
 
@@ -72,21 +73,26 @@ impl SheetRenderer {
         }
     }
 
-    pub fn song_events(&mut self, events: &[SongEvent]) {
+    pub fn song_events(&mut self, events: &[&SongEvent]) {
         for e in events {
-            let note = self.midi2note(e.midi_key);
+            let (is_on, midi_key) = match e.message {
+                MidiMessage::NoteOn { key, .. } => (true, key.as_int()),
+                MidiMessage::NoteOff { key, .. } => (false, key.as_int()),
+                _ => continue,
+            };
+            let note = self.midi2note(midi_key);
             let holes = self.note2holes(note);
             self.sheet_pipeline
                 .notehead_states_mut()
                 .entry(e.notehead_id.to_string())
                 .and_modify(|note| {
-                    if e.wrong {
-                        note.set_inactive()
-                    } else {
+                    if is_on {
                         note.set_active()
+                    } else {
+                        note.set_inactive()
                     }
                 });
-            if !e.wrong {
+            if is_on {
                 for i in (0..6).rev() {
                     let h: u16 = 1 << i;
                     let hole = format!("fingerhole-{}", (6 - i));

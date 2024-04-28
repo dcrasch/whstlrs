@@ -6,13 +6,6 @@ use midly::{num::u7, MidiMessage};
 use winit::keyboard;
 
 #[derive(Debug, Clone)]
-pub struct MidiEvent {
-    pub channel: u8,
-    pub timestamp: Duration,
-    pub message: MidiMessage,
-}
-
-#[derive(Debug, Clone)]
 pub struct SongNote {
     pub timestamp: f32,
     pub midi_key: u8,
@@ -23,11 +16,12 @@ pub struct SongNote {
 
 #[derive(Debug, Clone)]
 pub struct SongEvent {
-    pub timestamp: f32,
+    pub channel: u8,
+    pub timestamp: Duration,
     pub midi_key: u8,
     pub duration_length: f32,
     pub notehead_id: String,
-    pub wrong: bool,
+    pub message: MidiMessage,
 }
 
 pub struct PlaybackState {
@@ -47,7 +41,7 @@ impl PlaybackState {
             running : Duration::ZERO
         }
     }
-    pub fn update(&mut self, delta: Duration) -> Vec<&MidiEvent> {
+    pub fn update(&mut self, delta: Duration) -> Vec<&SongEvent> {
         self.running += delta;
         let events = self.song.file.events[self.song_state.seen_events..]
             .iter()
@@ -76,7 +70,7 @@ impl Song {
 pub struct SongFile {
     pub name: String,
     pub notes: Vec<SongNote>,
-    pub events: Vec<MidiEvent>,
+    pub events: Vec<SongEvent>,
 }
 
 impl SongFile {
@@ -103,7 +97,7 @@ impl SongFile {
             .delimiter(b'\t')
             .from_reader(text.as_bytes());
         let mut notes: Vec<SongNote> = Vec::new();
-        let mut events: Vec<MidiEvent> = Vec::new();
+        let mut events: Vec<SongEvent> = Vec::new();
         for record in reader.records() {
             if let Ok(record) = record {
                 match &record[1] {
@@ -119,7 +113,7 @@ impl SongFile {
                             midi_key,
                             duration,
                             duration_length,
-                            notehead_id,
+                            notehead_id: notehead_id.to_string(),
                         };
                         notes.push(note);
 
@@ -127,22 +121,28 @@ impl SongFile {
                         let timestamp_off = std::time::Duration::from_secs_f32(
                             timestamp + duration_length,
                         );
-                        let event = MidiEvent {
+                        let event = SongEvent {
                             channel: 0,
                             timestamp: timestamp_on,
                             message: MidiMessage::NoteOn {
                                 key: u7::new(midi_key),
                                 vel: u7::new(127),
                             },
+                            midi_key,
+                            duration_length,
+                            notehead_id: notehead_id.to_string(),
                         };
                         events.push(event);
-                        let event = MidiEvent {
+                        let event = SongEvent {
                             channel: 0,
                             timestamp: timestamp_off,
                             message: MidiMessage::NoteOff {
                                 key: u7::new(midi_key),
                                 vel: u7::new(0),
                             },
+                            midi_key,
+                            duration_length,
+                            notehead_id:notehead_id.to_string()
                         };
                         events.push(event);
                     }

@@ -30,36 +30,9 @@ impl PlayingScene {
     }
 
     fn update_song_player(&mut self, ctx: &Context, delta: Duration) -> f32 {
-        /*
-        // TODO move to update;
-        let events: Vec<SongEvent> = self
-            .song
-            .file
-            .notes
-            .iter()
-            .map(|n| {
-                if d >= n.timestamp && d <= (n.timestamp + n.duration_length) {
-                    SongEvent {
-                        timestamp: n.timestamp,
-                        midi_key: n.midi_key,
-                        duration_length: n.duration_length,
-                        notehead_id: n.notehead_id.to_string(),
-                        wrong: false,
-                    }
-                } else {
-                    SongEvent {
-                        timestamp: n.timestamp,
-                        midi_key: n.midi_key,
-                        duration_length: n.duration_length,
-                        notehead_id: n.notehead_id.to_string(),
-                        wrong: true,
-                    }
-                }
-            })
-            .collect();
+
+        let events = self.player.update(delta);
         self.sheet.song_events(&events);
-        */
-        let e = self.player.update(delta);
         0.0
     }
 }
