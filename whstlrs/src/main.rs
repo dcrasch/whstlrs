@@ -1,5 +1,6 @@
 mod context;
 mod output_manager;
+mod input_manager;
 mod render;
 mod scene;
 mod song;
@@ -7,6 +8,7 @@ mod utils;
 
 use crate::context::Context;
 
+use midly::MidiMessage;
 use scene::{playing_scene, Scene};
 use std::sync::Arc;
 use std::time::Duration;
@@ -21,6 +23,12 @@ use winit::{
 
 #[derive(Debug)]
 pub enum WhstlrsEvent {
+    MidiInput {
+        /// The MIDI channel that this message is associated with.
+        channel: u8,
+        /// The MIDI message type and associated data.
+        message: MidiMessage,
+    },
     Exit,
 }
 
@@ -69,12 +77,7 @@ impl Whstlrs {
             last_time: std::time::Instant::now(),
         }
     }
-    fn whstlrs_event(
-        &mut self,
-        event: WhstlrsEvent,
-        event_loop: &winit::event_loop::EventLoopWindowTarget<WhstlrsEvent>,
-    ) {
-    }
+   
 
     fn window_event(
         &mut self,
@@ -143,7 +146,12 @@ impl Whstlrs {
                             self.context.window.set_fullscreen(Some(f));
                         }
                     }
-                }
+                },
+                winit::keyboard::Key::Named(winit::keyboard::NamedKey::Escape) => {
+                    event_loop.exit();
+                },
+
+
                 _ => {}
             },
             WindowEvent::RedrawRequested => {
@@ -157,6 +165,22 @@ impl Whstlrs {
                 event_loop.exit();
             }
             _ => {}
+        }
+    }
+
+    fn whstlrs_event(
+        &mut self,
+        event: WhstlrsEvent,
+        event_loop: &winit::event_loop::EventLoopWindowTarget<WhstlrsEvent>,
+    ) {
+        match event {
+            WhstlrsEvent::MidiInput { channel, message } => {
+                self.game_scene
+                    .midi_event(&mut self.context, channel, &message);
+            },
+            WhstlrsEvent::Exit => {
+                event_loop.exit();
+            }
         }
     }
 
@@ -254,4 +278,5 @@ fn main() {
             }
         })
         .unwrap();
+    // TODO: shutdown midi
 }

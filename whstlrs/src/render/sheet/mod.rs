@@ -22,6 +22,30 @@ impl SheetRenderer {
         self.sheet_pipeline.update_time(gpu);
     }
 
+    pub fn user_midi_event(&mut self, message: &MidiMessage) {
+        let (is_on, midi_key) = match message {
+            MidiMessage::NoteOn { key, .. } => (true, key.as_int()),
+            MidiMessage::NoteOff { key, .. } => (false, key.as_int()),
+            _ => return,
+        };
+
+        if is_on {
+            let note = self.midi2note(midi_key);
+            let holes = self.note2holes(note);
+            for i in (0..6).rev() {
+                let h: u16 = 1 << i;
+                let hole = format!("fingerhole-{}", (6 - i));
+                self.sheet_pipeline
+                    .fingerhole_states_mut()
+                    .entry(hole.into())
+                    .and_modify(|fingerhole| match holes & h == h {
+                        true => fingerhole.set_active(),
+                        false => fingerhole.set_inactive(),
+                    });
+            }
+        }
+    }
+
     pub fn render<'rpass>(
         &'rpass mut self,
         transform_uniform: &'rpass Uniform<TransformUniform>,
@@ -70,13 +94,11 @@ impl SheetRenderer {
 
     pub fn song_events(&mut self, events: &[&SongEvent]) {
         for e in events {
-            let (is_on, midi_key) = match e.message {
+            let (is_on, _) = match e.message {
                 MidiMessage::NoteOn { key, .. } => (true, key.as_int()),
                 MidiMessage::NoteOff { key, .. } => (false, key.as_int()),
                 _ => continue,
             };
-            let note = self.midi2note(midi_key);
-            let holes = self.note2holes(note);
             self.sheet_pipeline
                 .notehead_states_mut()
                 .entry(e.notehead_id.to_string())
@@ -84,19 +106,6 @@ impl SheetRenderer {
                     true => note.set_active(),
                     false => note.set_inactive(),
                 });
-            if is_on {
-                for i in (0..6).rev() {
-                    let h: u16 = 1 << i;
-                    let hole = format!("fingerhole-{}", (6 - i));
-                    self.sheet_pipeline
-                        .fingerhole_states_mut()
-                        .entry(hole.into())
-                        .and_modify(|fingerhole| match holes & h == h {
-                            true => fingerhole.set_active(),
-                            false => fingerhole.set_inactive(),
-                        });
-                }
-            }
         }
     }
 }

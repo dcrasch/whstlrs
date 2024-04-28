@@ -1,5 +1,6 @@
 use std::time::Duration;
 
+use midly::MidiMessage;
 use wgpu_jumpstart::{wgpu, TransformUniform, Uniform};
 
 use crate::{context::Context, scene::midi_player::MidiPlayer, song::Song};
@@ -44,4 +45,7 @@ impl Scene for PlayingScene {
     }
 
     fn window_event(&mut self, _ctx: &mut Context, _event: &winit::event::WindowEvent) {}
+    fn midi_event(&mut self, _ctx: &mut Context, _channel: u8, message: &MidiMessage) {
+        self.sheet.user_midi_event(&message);
+    }
 }
