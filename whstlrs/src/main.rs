@@ -64,7 +64,7 @@ impl Whstlrs {
         Self {
             context,
             surface,
-            msaa_texture: msaa_texture,
+            msaa_texture,
             game_scene: Box::new(whistletab_scene),
             last_time: std::time::Instant::now(),
         }

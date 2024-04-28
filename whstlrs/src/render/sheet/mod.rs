@@ -80,33 +80,21 @@ impl SheetRenderer {
             self.sheet_pipeline
                 .notehead_states_mut()
                 .entry(e.notehead_id.to_string())
-                .and_modify(|note| {
-                    if is_on {
-                        note.set_active()
-                    } else {
-                        note.set_inactive()
-                    }
+                .and_modify(|note| match is_on {
+                    true => note.set_active(),
+                    false => note.set_inactive(),
                 });
             if is_on {
                 for i in (0..6).rev() {
                     let h: u16 = 1 << i;
                     let hole = format!("fingerhole-{}", (6 - i));
-
-                    if holes & h == h {
-                        self.sheet_pipeline
-                            .fingerhole_states_mut()
-                            .entry(hole.into())
-                            .and_modify(|fingerhole| {
-                                fingerhole.set_active();
-                            });
-                    } else {
-                        self.sheet_pipeline
-                            .fingerhole_states_mut()
-                            .entry(hole.into())
-                            .and_modify(|fingerhole| {
-                                fingerhole.set_inactive();
-                            });
-                    }
+                    self.sheet_pipeline
+                        .fingerhole_states_mut()
+                        .entry(hole.into())
+                        .and_modify(|fingerhole| match holes & h == h {
+                            true => fingerhole.set_active(),
+                            false => fingerhole.set_inactive(),
+                        });
                 }
             }
         }
