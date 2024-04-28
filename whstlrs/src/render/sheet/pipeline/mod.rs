@@ -1,18 +1,11 @@
 mod instance_data;
 
-use std::borrow::BorrowMut;
 use std::collections::HashMap;
-use std::time::Duration;
 
 use resvg::usvg;
 use usvg::Color;
 use wgpu_jumpstart::wgpu::util::DeviceExt;
-use wgpu_jumpstart::wgpu::BindGroup;
-use wgpu_jumpstart::{
-    wgpu, Gpu, Instances, RenderPipelineBuilder, Shape, TransformUniform, Uniform,
-};
-
-use bytemuck::{Pod, Zeroable};
+use wgpu_jumpstart::{wgpu, Gpu, RenderPipelineBuilder, TransformUniform, Uniform};
 
 use lyon::math::Point;
 use lyon::path::PathEvent;

@@ -3,7 +3,6 @@ use std::sync::Arc;
 use std::{fs, time::Duration};
 
 use midly::{num::u7, MidiMessage};
-use winit::keyboard;
 
 #[derive(Debug, Clone)]
 pub struct SongNote {
@@ -37,8 +36,8 @@ impl PlaybackState {
     pub fn new(song: Arc<Song>) -> Self {
         PlaybackState {
             song,
-            song_state : SongState { seen_events:0}.into(),
-            running : Duration::ZERO
+            song_state: SongState { seen_events: 0 }.into(),
+            running: Duration::ZERO,
         }
     }
     pub fn update(&mut self, delta: Duration) -> Vec<&SongEvent> {
@@ -52,7 +51,6 @@ impl PlaybackState {
         events
     }
 }
-
 
 #[derive(Debug, Clone)]
 pub struct Song {
@@ -118,9 +116,8 @@ impl SongFile {
                         notes.push(note);
 
                         let timestamp_on = std::time::Duration::from_secs_f32(timestamp);
-                        let timestamp_off = std::time::Duration::from_secs_f32(
-                            timestamp + duration_length,
-                        );
+                        let timestamp_off =
+                            std::time::Duration::from_secs_f32(timestamp + duration_length);
                         let event = SongEvent {
                             channel: 0,
                             timestamp: timestamp_on,
@@ -142,7 +139,7 @@ impl SongFile {
                             },
                             midi_key,
                             duration_length,
-                            notehead_id:notehead_id.to_string()
+                            notehead_id: notehead_id.to_string(),
                         };
                         events.push(event);
                     }

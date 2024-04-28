@@ -1,13 +1,8 @@
-use std::{f32::EPSILON, time::Duration};
+use std::time::Duration;
 
-use midly::{num::u7, MidiMessage};
 use wgpu_jumpstart::{wgpu, TransformUniform, Uniform};
 
-use crate::{
-    context::Context,
-    scene::midi_player::MidiPlayer,
-    song::{Song, SongEvent},
-};
+use crate::{context::Context, scene::midi_player::MidiPlayer, song::Song};
 
 use super::Scene;
 
@@ -23,14 +18,10 @@ impl PlayingScene {
         let sheet = SheetRenderer::new(&ctx.gpu, &ctx.transform);
 
         let player = MidiPlayer::new(song);
-        Self {
-            sheet,
-            player,
-        }
+        Self { sheet, player }
     }
 
     fn update_song_player(&mut self, ctx: &Context, delta: Duration) -> f32 {
-
         let events = self.player.update(delta);
         self.sheet.song_events(&events);
         0.0

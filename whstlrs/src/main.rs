@@ -39,7 +39,7 @@ impl Whstlrs {
         context.resize();
         context.gpu.submit();
 
-        let mut msaa_texture = Some(
+        let msaa_texture = Some(
             context
                 .gpu
                 .device
@@ -85,7 +85,7 @@ impl Whstlrs {
 
         match &event {
             WindowEvent::Resized(_) => {
-                let mut msaa_texture = Some(
+                let msaa_texture = Some(
                     self.context
                         .gpu
                         .device

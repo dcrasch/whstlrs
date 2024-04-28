@@ -1,6 +1,3 @@
-use std::collections::HashMap;
-use std::time::Duration;
-
 use crate::song::SongEvent;
 use crate::TransformUniform;
 use midly::MidiMessage;
@@ -10,8 +7,6 @@ use wgpu_jumpstart::Gpu;
 mod pipeline;
 use pipeline::SheetPipeline;
 use wgpu_jumpstart::Uniform;
-
-use self::pipeline::NoteHeadState;
 
 pub struct SheetRenderer {
     sheet_pipeline: SheetPipeline,
