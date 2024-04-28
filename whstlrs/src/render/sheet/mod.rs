@@ -28,7 +28,6 @@ impl SheetRenderer {
             MidiMessage::NoteOff { key, .. } => (false, key.as_int()),
             _ => return,
         };
-
         if is_on {
             let note = self.midi2note(midi_key);
             let holes = self.note2holes(note);
@@ -43,6 +42,9 @@ impl SheetRenderer {
                         false => fingerhole.set_inactive(),
                     });
             }
+        }
+        else {
+            // mmmm
         }
     }
 
@@ -62,13 +64,18 @@ impl SheetRenderer {
             "G" => 0b0_111000,
             "A" => 0b0_110000,
             "B" => 0b0_100000,
-            "C" => 0b0_000000,
-            "D'" => 0b1_011111,
-            "E'" => 0b1_111111,
-            "F#'" => 0b1_111110,
-            "G'" => 0b1_111000,
-            "A'" => 0b1_110000,
-            "B'" => 0b1_100000,
+            "Cb" => 0b0_011000,
+            "C#" => 0b0_000000,
+            "D'"  => 0b0_011111,
+
+            "E'"  => 0b1_111110,
+            "F#'" => 0b1_111100,
+            "G'"  => 0b1_111000,
+            "A'"  => 0b1_110000,
+            "B'"  => 0b1_100000,
+            "Cb'" => 0b1_0110000,
+            "C#'"  => 0b1_000000,
+            "D''" => 0b1_011111,
             _ => 0,
         }
     }
@@ -81,13 +88,18 @@ impl SheetRenderer {
             67 => "G",
             69 => "A",
             71 => "B",
-            72 => "C",
+            72 => "Cb",
+            73 => "C#",
             74 => "D'",
+
             76 => "E'",
             78 => "F#'",
             79 => "G'",
             81 => "A'",
             83 => "B'",
+            84 => "Cb'",
+            85 => "C#'",
+            86 => "D''",
             _ => "?",
         }
     }
