@@ -32,7 +32,7 @@ impl SheetRenderer {
         if is_on {
             let note = self.midi2note(midi_key);
             let holes = self.note2holes(note);
-            println!("{} {}", midi_key, note);
+            //println!("{} {}", midi_key, note);
             for i in (0..6).rev() {
                 let h: u16 = 1 << i;
                 let hole = format!("fingerhole-{}", (6 - i));
@@ -61,7 +61,7 @@ impl SheetRenderer {
         match note {
             "D" => 0b0_111111,
             "E" => 0b0_111110,
-            "F" => 0b0_111101, // warble
+            "F" => 0b0_111101, // warble halfnote
             "F#" => 0b0_111100,
             "G" => 0b0_111000,
             "G#" => 0b0_110111, // warble
