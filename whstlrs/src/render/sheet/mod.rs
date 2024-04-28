@@ -28,9 +28,11 @@ impl SheetRenderer {
             MidiMessage::NoteOff { key, .. } => (false, key.as_int()),
             _ => return,
         };
+
         if is_on {
             let note = self.midi2note(midi_key);
             let holes = self.note2holes(note);
+            println!("{} {}", midi_key, note);
             for i in (0..6).rev() {
                 let h: u16 = 1 << i;
                 let hole = format!("fingerhole-{}", (6 - i));
@@ -59,26 +61,26 @@ impl SheetRenderer {
         match note {
             "D" => 0b0_111111,
             "E" => 0b0_111110,
-            "F" => 0b0_111101,
+            "F" => 0b0_111101, // warble
             "F#" => 0b0_111100,
             "G" => 0b0_111000,
-            "G#" => 0b0_110111,
+            "G#" => 0b0_110111, // warble
             "A" => 0b0_110000,
-            "A#" => 0b0_101111,
+            "A#" => 0b0_101111, // warble
             "B" => 0b0_100000,
-            "C" => 0b0_011100,
+            "C" => 0b0_011000,
             "C#" => 0b0_000000,
 
-            "D'" => 0b0_011111,
+            "D'" => 0b1_011111,
             "E'" => 0b1_111110,
-            "F'" => 0b1_111101,
+            "F'" => 0b1_111101, // warble
             "F#'" => 0b1_111100,
             "G'" => 0b1_111000,
-            "G#" => 0b1_110111,
+            "G#" => 0b1_110111, // warble
             "A'" => 0b1_110000,
-            "A#'" => 0b1_101111,
+            "A#'" => 0b1_101111, // warble
             "B'" => 0b1_100000,
-            "C'" => 0b1_011000,
+            "C'" => 0b1_011100,
             "C#'" => 0b1_000000,
             "D''" => 0b1_011111,
             _ => 0,
