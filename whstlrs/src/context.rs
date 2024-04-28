@@ -1,5 +1,5 @@
-use crate::output_manager::OutputConnection;
 use crate::input_manager::InputConnection;
+use crate::output_manager::OutputConnection;
 use crate::song::{Song, SongFile};
 use crate::utils::window::WindowState;
 use crate::WhstlrsEvent;
@@ -52,7 +52,7 @@ impl Context {
             song: song_file.map(Song::new),
             output_connection: OutputConnection::new(),
             input_connection: input_connection,
-            proxy
+            proxy,
         }
     }
 

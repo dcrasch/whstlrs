@@ -1,6 +1,6 @@
 mod context;
-mod output_manager;
 mod input_manager;
+mod output_manager;
 mod render;
 mod scene;
 mod song;
@@ -77,7 +77,6 @@ impl Whstlrs {
             last_time: std::time::Instant::now(),
         }
     }
-   
 
     fn window_event(
         &mut self,
@@ -146,11 +145,10 @@ impl Whstlrs {
                             self.context.window.set_fullscreen(Some(f));
                         }
                     }
-                },
+                }
                 winit::keyboard::Key::Named(winit::keyboard::NamedKey::Escape) => {
                     event_loop.exit();
-                },
-
+                }
 
                 _ => {}
             },
@@ -177,7 +175,7 @@ impl Whstlrs {
             WhstlrsEvent::MidiInput { channel, message } => {
                 self.game_scene
                     .midi_event(&mut self.context, channel, &message);
-            },
+            }
             WhstlrsEvent::Exit => {
                 event_loop.exit();
             }
