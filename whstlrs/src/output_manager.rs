@@ -24,6 +24,6 @@ impl OutputConnection {
                 return;
             }
         };
-        self.conn_out.send(&[msg, key, velocity]).unwrap();
+        // DEBUG self.conn_out.send(&[msg, key, velocity]).unwrap();
     }
 }

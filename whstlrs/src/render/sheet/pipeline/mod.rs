@@ -2,7 +2,7 @@ mod instance_data;
 
 use std::collections::HashMap;
 
-use resvg::usvg;
+use resvg::usvg::{self, Rect};
 use usvg::Color;
 use wgpu_jumpstart::wgpu::util::DeviceExt;
 use wgpu_jumpstart::{wgpu, Gpu, RenderPipelineBuilder, TransformUniform, Uniform};
@@ -23,8 +23,8 @@ pub struct NoteHeadState {
 }
 
 impl NoteHeadState {
-    pub fn new() -> Self {
-        Self { active: false }
+    pub fn new(active: bool) -> Self {
+        Self { active }
     }
     pub fn color(&self) -> Color {
         if self.active {
@@ -47,8 +47,8 @@ pub struct FingerHolestate {
 }
 
 impl FingerHolestate {
-    pub fn new() -> Self {
-        Self { active: false }
+    pub fn new(active: bool) -> Self {
+        Self { active }
     }
     pub fn color(&self) -> Color {
         if self.active {
@@ -72,6 +72,7 @@ pub struct SheetPipeline {
     groups: HashMap<String, Vec<usize>>,
     pub notehead_states: HashMap<String, NoteHeadState>,
     pub fingerhole_states: HashMap<String, FingerHolestate>,
+    bboxes: Vec<(Rect, String)>,
     primitives: Vec<GpuPrimitive>,
 }
 
@@ -212,15 +213,21 @@ impl MyUniform {
     }
 }
 
-fn collect_paths(parent: &usvg::Group, paths: &mut Vec<(usvg::Path, String)>, id_attr: &str) {
+fn collect_paths(
+    parent: &usvg::Group,
+    paths: &mut Vec<(usvg::Path, String)>,
+    bboxes: &mut Vec<(Rect, String)>,
+    id_attr: &str,
+) {
     for node in parent.children() {
         if let usvg::Node::Group(ref group) = node {
             let id_attr = if group.id().starts_with("Note-") || group.id().starts_with("finger") {
+                bboxes.push((group.abs_bounding_box(), group.id().to_string()));
                 group.id()
             } else {
                 id_attr
             };
-            collect_paths(group, paths, id_attr);
+            collect_paths(group, paths, bboxes, id_attr);
         } else if let usvg::Node::Path(ref p) = node {
             paths.push((*p.to_owned(), id_attr.to_string()));
         }
@@ -254,7 +261,9 @@ impl<'a> SheetPipeline {
         };
         let view_box = rtree.view_box();
         let mut paths: Vec<(usvg::Path, String)> = Vec::new();
-        collect_paths(rtree.root(), &mut paths, "");
+        let mut bboxes: Vec<(Rect, String)> = Vec::new();
+
+        collect_paths(rtree.root(), &mut paths, &mut bboxes, "");
         for (p, id_attr) in paths {
             let t = p.abs_transform();
             if t != prev_transform {
@@ -391,8 +400,11 @@ impl<'a> SheetPipeline {
         } else {
             (WINDOW_SIZE, WINDOW_SIZE / scale)
         };
-        let pan = [vb_width / -3.0, vb_height / -2.0];
-        let zoom = 4.0 / f32::max(vb_width, vb_height);
+        let pan = [-565.0,-340.0];
+        let zoom = 4.0 /1280.0;
+
+        println!("pan {:#?}", pan);
+        println!("zoom {:#?}", zoom);
 
         let _ = &gpu.queue.write_buffer(
             &myuniform.globals_ubo,
@@ -408,7 +420,7 @@ impl<'a> SheetPipeline {
         let notehead_states = groups
             .keys()
             .filter(|k| k.starts_with("Note-"))
-            .map(|k| (k.to_string(), NoteHeadState { active: false }))
+            .map(|k| (k.to_string(), NoteHeadState::new(false)))
             .collect::<HashMap<String, NoteHeadState>>();
         let fingerhole_states = groups
             .keys()
@@ -422,6 +434,7 @@ impl<'a> SheetPipeline {
             groups,
             notehead_states,
             fingerhole_states,
+            bboxes,
             primitives,
         }
     }
@@ -450,6 +463,21 @@ impl<'a> SheetPipeline {
         let _ = &gpu
             .queue
             .write_buffer(&self.uniform.prims_ssbo, 0, bytemuck::cast_slice(&prims));
+    }
+
+    pub fn notehead_match(&self, x: f32, y: f32) -> Option<String> {
+        for (r,notehead_id) in self.bboxes.iter() {
+            println!("{}: {} {} {} {}",notehead_id, r.top(),r.bottom(),r.left(),r.right());
+            break;
+        }
+        if let Some((_, notehead_id)) = self.bboxes.iter().find(|(rect, notehead_id)| {
+            y >= rect.top() && y <= rect.bottom() && x >= rect.left() && x <= rect.right()
+        }) {
+            println!("found {}", notehead_id);
+            Some(notehead_id.to_string())
+        } else {
+            None
+        }
     }
 
     pub fn notehead_states_mut(&mut self) -> &mut HashMap<String, NoteHeadState> {

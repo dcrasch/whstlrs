@@ -2,7 +2,10 @@ use std::time::Duration;
 
 use midly::MidiMessage;
 use wgpu_jumpstart::{wgpu, TransformUniform, Uniform};
-
+use winit::{
+    event::{ElementState, KeyEvent, MouseButton, WindowEvent},
+    keyboard::{Key, NamedKey},
+};
 use crate::{context::Context, scene::midi_player::MidiPlayer, song::Song};
 
 use super::Scene;
@@ -10,8 +13,8 @@ use super::Scene;
 use crate::render::SheetRenderer;
 
 pub struct PlayingScene {
-    sheet: SheetRenderer,
-    player: MidiPlayer,
+    pub sheet: SheetRenderer,
+    pub player: MidiPlayer,
 }
 
 impl PlayingScene {
@@ -44,7 +47,10 @@ impl Scene for PlayingScene {
         self.sheet.render(transform_uniform, render_pass);
     }
 
-    fn window_event(&mut self, _ctx: &mut Context, _event: &winit::event::WindowEvent) {}
+    fn window_event(&mut self, ctx: &mut Context, event: &winit::event::WindowEvent) {
+        SheetRenderer::handle_window_event(self, ctx, event);
+    }
+
     fn midi_event(&mut self, _ctx: &mut Context, _channel: u8, message: &MidiMessage) {
         self.sheet.user_midi_event(&message);
     }

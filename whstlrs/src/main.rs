@@ -164,6 +164,7 @@ impl Whstlrs {
             }
             _ => {}
         }
+        self.game_scene.window_event(&mut self.context, event);
     }
 
     fn whstlrs_event(

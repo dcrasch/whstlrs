@@ -14,6 +14,6 @@ pub trait Scene {
         transform: &'pass Uniform<TransformUniform>,
         rpass: &mut wgpu::RenderPass<'pass>,
     );
-    fn window_event(&mut self, _ctx: &mut Context, _event: &WindowEvent) {}
+    fn window_event(&mut self, ctx: &mut Context, event: &WindowEvent) {}
     fn midi_event(&mut self, ctx: &mut Context, channel: u8, message: &MidiMessage) {}
 }

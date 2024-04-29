@@ -1,5 +1,8 @@
+use crate::scene::playing_scene::PlayingScene;
 use crate::song::SongEvent;
+use crate::Context;
 use crate::TransformUniform;
+
 use midly::MidiMessage;
 use wgpu_jumpstart::wgpu;
 use wgpu_jumpstart::Gpu;
@@ -7,6 +10,9 @@ use wgpu_jumpstart::Gpu;
 mod pipeline;
 use pipeline::SheetPipeline;
 use wgpu_jumpstart::Uniform;
+use winit::event::ElementState;
+use winit::event::MouseButton;
+use winit::event::WindowEvent;
 
 pub struct SheetRenderer {
     sheet_pipeline: SheetPipeline,
@@ -30,8 +36,8 @@ impl SheetRenderer {
         };
 
         if is_on {
-            let note = self.midi2note(midi_key);
-            let holes = self.note2holes(note);
+            let note = SheetRenderer::midi2note(midi_key);
+            let holes = SheetRenderer::note2holes(&note);
             //println!("{} {}", midi_key, note);
             for i in (0..6).rev() {
                 let h: u16 = 1 << i;
@@ -57,7 +63,7 @@ impl SheetRenderer {
         self.sheet_pipeline.render(transform_uniform, render_pass);
     }
 
-    pub fn note2holes(&self, note: &str) -> u16 {
+    pub fn note2holes(note: &str) -> u16 {
         match note {
             "D" => 0b0_111111,
             "E" => 0b0_111110,
@@ -87,7 +93,7 @@ impl SheetRenderer {
         }
     }
 
-    pub fn midi2note(&self, midi_key: u8) -> &str {
+    pub fn midi2note(midi_key: u8) -> String {
         match midi_key {
             62 => "D",
             64 => "E",
@@ -115,6 +121,7 @@ impl SheetRenderer {
             86 => "D''",
             _ => "?",
         }
+        .into()
     }
 
     pub fn song_events(&mut self, events: &[&SongEvent]) {
@@ -132,5 +139,68 @@ impl SheetRenderer {
                     false => note.set_inactive(),
                 });
         }
+    }
+
+    pub fn handle_window_event(
+        scene: &mut PlayingScene,
+        ctx: &mut Context,
+        event: &WindowEvent,
+    ) -> bool {
+        match &event {
+            WindowEvent::MouseInput { state, button, .. } => {
+
+                return Self::handle_mouse_input(scene, ctx, state, button);
+            }
+            _ => {}
+        }
+        true
+    }
+    fn handle_mouse_input(
+        scene: &mut PlayingScene,
+        ctx: &mut Context,
+        state: &ElementState,
+        button: &MouseButton,
+    ) -> bool {
+
+        if  (state, button) == (&ElementState::Pressed, &MouseButton::Left) {
+        let pos = &ctx.window_state.cursor_logical_position;
+        let h = ctx.window_state.logical_size.width;
+        let w = ctx.window_state.logical_size.width;
+        let x= pos.x;
+        let y = pos.y;
+        println!("{} {}",x,y);
+        if let Some(notehead_id) = scene.sheet.sheet_pipeline.notehead_match(x, y) {
+            let midi_key = ctx
+                .song
+                .as_ref()
+                .unwrap()
+                .file
+                .notes
+                .iter()
+                .find(|note| note.notehead_id == notehead_id)
+                .unwrap()
+                .midi_key;
+            let note = SheetRenderer::midi2note(midi_key);
+            let holes = SheetRenderer::note2holes(&note);
+            //println!("{} {}", midi_key, note);
+            for i in (0..6).rev() {
+                let h: u16 = 1 << i;
+                let hole = format!("fingerhole-{}", (6 - i));
+                scene
+                    .sheet
+                    .sheet_pipeline
+                    .fingerhole_states_mut()
+                    .entry(hole.into())
+                    .and_modify(|fingerhole| match holes & h == h {
+                        true => fingerhole.set_active(),
+                        false => fingerhole.set_inactive(),
+                    });
+            }
+
+            true
+        } else {
+            false
+        }
+    } else { false }
     }
 }
