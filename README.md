@@ -79,9 +79,9 @@ cargo run
 
 # TODO
 
-[ ] hover notes show fingering
-[ ] import of tune from the session
-[ ] UI with settings and load song
+- [ ] hover notes show fingering
+- [ ] import of tune from the session
+- [ ] UI with settings and load song
 
 # License
 
