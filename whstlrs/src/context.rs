@@ -15,7 +15,7 @@ pub struct Context {
 
     pub transform: Uniform<TransformUniform>,
     pub song: Option<Song>,
-    pub output_connection: OutputConnection,
+    //pub output_connection: OutputConnection,
     pub input_connection: InputConnection,
 
     pub proxy: EventLoopProxy<WhstlrsEvent>,
@@ -42,6 +42,8 @@ impl Context {
         } else {
             None
         };
+        //let output_connection: OutputConnection = OutputConnection::new();
+
         let mut input_connection = InputConnection::new(proxy.clone());
         input_connection.connect_input();
         Self {
@@ -50,8 +52,8 @@ impl Context {
             gpu,
             transform: transform_uniform,
             song: song_file.map(Song::new),
-            output_connection: OutputConnection::new(),
-            input_connection: input_connection,
+            //output_connection, 
+            input_connection,
             proxy,
         }
     }
