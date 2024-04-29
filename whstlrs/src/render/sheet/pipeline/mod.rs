@@ -365,6 +365,7 @@ impl<'a> SheetPipeline {
                         },
                     ],
                 }],
+                compilation_options: wgpu::PipelineCompilationOptions::default(),
             },
         )
         .fragment("fs_main", &shader, &[Some(target)])

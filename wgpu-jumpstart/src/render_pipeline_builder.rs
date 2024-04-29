@@ -56,6 +56,7 @@ impl<'a> RenderPipelineBuilder<'a> for wgpu::RenderPipelineDescriptor<'a> {
             module: fragment_module,
             entry_point,
             targets,
+            compilation_options: wgpu::PipelineCompilationOptions::default(),
         });
         self
     }

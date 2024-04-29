@@ -7,7 +7,7 @@ members = [
 resolver="2"
 
 [workspace.dependencies]
-wgpu = "0.19.3"
+wgpu = "0.20"
 bytemuck = { version = "1.5", features = ["derive"] }
 log = "0.4"
 env_logger = "0.10"

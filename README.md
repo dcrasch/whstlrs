@@ -51,6 +51,7 @@ cargo run
 * https://lilypond.org/
 * https://en.wikipedia.org/wiki/Tin_whistle
 * https://www.frescobaldi.org/
+* https://michaeleskin.com/abctools/abctools.html
 
 ## Inspiration
 

@@ -52,7 +52,7 @@ impl Context {
             gpu,
             transform: transform_uniform,
             song: song_file.map(Song::new),
-            //output_connection, 
+            //output_connection,
             input_connection,
             proxy,
         }
