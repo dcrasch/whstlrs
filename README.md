@@ -3,13 +3,22 @@
 Whstlrs is a cross-platform midi visualizer, build in Rust,
 It helps people to practice song on a MIDI wind controller.
 
-## tools
+## Supported operating systems
 
-* abc2ly -> lilypond format -> notes, midi, svg
+* Linux Raspberry PI
+* Macos
+* Windows 10
 
 ## Requirements
 
-* midi wind controller 
+* midi wind controller
+* graphics card supported by WGPU.
+
+## Screenshot
+
+<div style="width:100px">
+  ![whstlrs_screenshot](https://github.com/dcrasch/whstlrs/assets/2651634/a0e136b1-2fb0-4f4a-aead-e461b0cc6914)
+</div>
 
 ## Development
 
@@ -29,6 +38,9 @@ $Env:RUST_LOG = "info"
 cargo run
 ```
 
+## tools
+
+* abc2ly -> lilypond format -> notes, midi, svg
 
 ## Graphics libraries
 
