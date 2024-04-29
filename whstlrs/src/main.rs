@@ -54,7 +54,7 @@ impl Whstlrs {
                 .create_texture(&wgpu::TextureDescriptor {
                     label: Some("Multisampled frame descriptor"),
                     size: wgpu::Extent3d {
-                        width: 1080,
+                        width: 1280,
                         height: 720,
                         depth_or_array_layers: 1,
                     },
@@ -241,7 +241,7 @@ fn main() {
 
     let builder = winit::window::WindowBuilder::new()
         .with_inner_size(winit::dpi::LogicalSize {
-            width: 1080.0,
+            width: 1280.0,
             height: 720.0,
         })
         .with_title("Whistlrs")

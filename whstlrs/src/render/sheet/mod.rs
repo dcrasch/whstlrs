@@ -1,5 +1,6 @@
 use crate::scene::playing_scene::PlayingScene;
 use crate::song::SongEvent;
+use crate::song::SongNote;
 use crate::Context;
 use crate::TransformUniform;
 
@@ -168,39 +169,43 @@ impl SheetRenderer {
         let w = ctx.window_state.logical_size.width;
         let x= pos.x;
         let y = pos.y;
-        println!("{} {}",x,y);
         if let Some(notehead_id) = scene.sheet.sheet_pipeline.notehead_match(x, y) {
-            let midi_key = ctx
-                .song
-                .as_ref()
-                .unwrap()
-                .file
-                .notes
-                .iter()
-                .find(|note| note.notehead_id == notehead_id)
-                .unwrap()
-                .midi_key;
-            let note = SheetRenderer::midi2note(midi_key);
-            let holes = SheetRenderer::note2holes(&note);
-            //println!("{} {}", midi_key, note);
-            for i in (0..6).rev() {
-                let h: u16 = 1 << i;
-                let hole = format!("fingerhole-{}", (6 - i));
-                scene
-                    .sheet
-                    .sheet_pipeline
-                    .fingerhole_states_mut()
-                    .entry(hole.into())
-                    .and_modify(|fingerhole| match holes & h == h {
-                        true => fingerhole.set_active(),
-                        false => fingerhole.set_inactive(),
-                    });
+            let note = ctx
+            .song
+            .as_ref()
+            .unwrap()
+            .file
+            .notes
+            .iter()
+            .find(|note| note.notehead_id == notehead_id);
+            if let Some(&SongNote { midi_key, ..}) =  note {
+                let note = SheetRenderer::midi2note(midi_key);
+                let holes = SheetRenderer::note2holes(&note);
+                //println!("{} {}", midi_key, note);
+                for i in (0..6).rev() {
+                    let h: u16 = 1 << i;
+                    let hole = format!("fingerhole-{}", (6 - i));
+                    scene
+                        .sheet
+                        .sheet_pipeline
+                        .fingerhole_states_mut()
+                        .entry(hole.into())
+                        .and_modify(|fingerhole| match holes & h == h {
+                            true => fingerhole.set_active(),
+                            false => fingerhole.set_inactive(),
+                        });
+                }
+                return true;
             }
-
-            true
-        } else {
-            false
+            else {
+                return false;
+            }
         }
-    } else { false }
+        else {
+            return false;
+        }
+        
     }
+    return false;
 }
+    }

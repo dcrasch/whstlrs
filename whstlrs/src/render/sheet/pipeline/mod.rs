@@ -400,11 +400,9 @@ impl<'a> SheetPipeline {
         } else {
             (WINDOW_SIZE, WINDOW_SIZE / scale)
         };
-        let pan = [-565.0,-340.0];
-        let zoom = 4.0 /1280.0;
-
-        println!("pan {:#?}", pan);
-        println!("zoom {:#?}", zoom);
+        // fullscreen zoom
+        let pan = [vb_width / -2.0, vb_height / -2.0];
+        let zoom = 2.0 * scale / f32::max(vb_width, vb_height);
 
         let _ = &gpu.queue.write_buffer(
             &myuniform.globals_ubo,
