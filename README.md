@@ -77,6 +77,12 @@ cargo run
 * https://warbl.xyz
 * https://github.com/amowry/warbl
 
+# TODO
+
+[ ] hover notes show fingering
+[ ] import of tune from the session
+[ ] UI with settings and load song
+
 # License
 
 This code is distributed under a GPL v3 style license, see the LICENSE file for complete information.
