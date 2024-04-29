@@ -16,9 +16,7 @@ It helps people to practice song on a MIDI wind controller.
 
 ## Screenshot
 
-<div style="width:100px">
-  ![whstlrs_screenshot](https://github.com/dcrasch/whstlrs/assets/2651634/a0e136b1-2fb0-4f4a-aead-e461b0cc6914)
-</div>
+<img src="https://github.com/dcrasch/whstlrs/assets/2651634/a0e136b1-2fb0-4f4a-aead-e461b0cc6914" width="800"/>
 
 ## Development
 
