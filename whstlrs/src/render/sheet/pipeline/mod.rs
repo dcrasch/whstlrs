@@ -463,15 +463,10 @@ impl<'a> SheetPipeline {
             .write_buffer(&self.uniform.prims_ssbo, 0, bytemuck::cast_slice(&prims));
     }
 
-    pub fn notehead_match(&self, x: f32, y: f32) -> Option<String> {
-        for (r,notehead_id) in self.bboxes.iter() {
-            println!("{}: {} {} {} {}",notehead_id, r.top(),r.bottom(),r.left(),r.right());
-            break;
-        }
+    pub fn find_notehead(&self, x: f32, y: f32) -> Option<String> {
         if let Some((_, notehead_id)) = self.bboxes.iter().find(|(rect, notehead_id)| {
             y >= rect.top() && y <= rect.bottom() && x >= rect.left() && x <= rect.right()
         }) {
-            println!("found {}", notehead_id);
             Some(notehead_id.to_string())
         } else {
             None

@@ -1,12 +1,12 @@
 use std::time::Duration;
 
+use crate::{context::Context, scene::midi_player::MidiPlayer, song::Song};
 use midly::MidiMessage;
 use wgpu_jumpstart::{wgpu, TransformUniform, Uniform};
 use winit::{
     event::{ElementState, KeyEvent, MouseButton, WindowEvent},
     keyboard::{Key, NamedKey},
 };
-use crate::{context::Context, scene::midi_player::MidiPlayer, song::Song};
 
 use super::Scene;
 
