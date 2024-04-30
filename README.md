@@ -6,7 +6,7 @@ It helps people to practice song on a MIDI wind controller.
 ## Supported operating systems
 
 * Linux Raspberry PI
-* Macos
+* macOS ?-)
 * Windows 10
 
 ## Requirements
