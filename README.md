@@ -79,9 +79,10 @@ cargo run
 
 # TODO
 
-- [ ] hover notes show fingering
+- [x] click notes show fingering
 - [ ] import of tune from the session
 - [ ] UI with settings and load song
+- [ ] Set speed and start of music
 
 # License
 
