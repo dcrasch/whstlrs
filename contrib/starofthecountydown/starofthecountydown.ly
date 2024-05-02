@@ -23,6 +23,18 @@
  )
 )
 
+#(define (attrs-barline grob)
+        (list
+      (cons 'class "bar-line")
+      )
+   )
+
+#(define (attrs-staffsymbol grob)
+        (list
+      (cons 'class "staff-symbol")
+      )
+   )
+
 
 voicedefault =  {
   \set Score.measureBarType = ""
@@ -44,7 +56,9 @@ voicedefault =  {
 \score {
   <<     
     \context Staff="default" {
-      \override NoteHead.output-attributes  = #attrs-notehead
+       \override NoteHead.output-attributes  = #attrs-notehead
+       \override Staff.BarLine.output-attributes = #attrs-barline
+       \override Staff.StaffSymbol.output-attributes = #attrs-staffsymbol
       \voicedefault 
     }
   >>

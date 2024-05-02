@@ -4,1042 +4,1110 @@
 tspan { white-space: pre; }
 ]]>
 </style>
-<g transform="translate(36.3968, 6.4194)">
-<text font-family="LilyPond Serif" font-weight="bold" font-size="3.4927" text-anchor="start" fill="currentColor">
+<g transform="translate(40.1013, 6.2107)">
+<text font-family="serif" font-weight="bold" font-size="3.4929" text-anchor="start" fill="currentColor">
 <tspan>Star Of The County Down</tspan>
 </text>
 </g>
-<g transform="translate(5.6906, 9.9194)">
-<text font-family="LilyPond Serif" font-size="2.2001" text-anchor="start" fill="currentColor">
+<g transform="translate(5.6906, 9.7107)">
+<text font-family="serif" font-size="2.2000" text-anchor="start" fill="currentColor">
 <tspan>jig</tspan>
 </text>
 </g>
-<g transform="translate(14.2264, 16.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
-</g>
-<g transform="translate(14.2264, 15.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
-</g>
-<g transform="translate(14.2264, 14.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
-</g>
-<g transform="translate(14.2264, 13.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
-</g>
-<g transform="translate(14.2264, 12.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
-</g>
-<g transform="translate(79.9141, 14.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(29.8781, 14.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(113.6210, 14.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(63.5361, 14.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(96.7563, 14.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(46.7428, 14.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(5.6906, 17.6450)">
+<g transform="translate(5.6906, 17.4645)">
 <rect x="85.1062" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(5.6906, 17.6450)">
+<g transform="translate(5.6906, 17.4645)">
 <rect x="71.0628" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(5.6906, 17.6450)">
+<g transform="translate(5.6906, 17.4645)">
 <rect x="18.2279" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g class="note-head" id="Note-32-10">
-<g transform="translate(67.2409, 15.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+<g class="staff-symbol">
+<g transform="translate(14.2264, 16.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
+</g>
+<g transform="translate(14.2264, 15.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
+</g>
+<g transform="translate(14.2264, 14.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
+</g>
+<g transform="translate(14.2264, 13.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
+</g>
+<g transform="translate(14.2264, 12.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="99.5346" y2="0"/>
 </g>
 </g>
-<g transform="translate(84.8581, 14.6450)">
-<rect x="-0.0650" y="-0.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-32-64">
-<g transform="translate(83.6189, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+<g class="bar-line">
+<g transform="translate(113.6210, 14.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(90.0273, 14.6450)">
-<rect x="-0.0650" y="-0.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+<g class="bar-line">
 </g>
-<g class="note-head" id="Note-33-2">
-<g transform="translate(88.7881, 17.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(92.3620, 14.6450)">
-<rect x="-0.0650" y="-0.1900" width="0.1300" height="3.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(87.4427, 14.6450)">
-<rect x="-0.0650" y="-0.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-32-71">
-<g transform="translate(86.2035, 17.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+<g class="bar-line">
+<g transform="translate(96.7563, 14.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
 </g>
-<g class="note-head" id="Note-33-10">
-<g transform="translate(91.1228, 18.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(79.9141, 14.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
 </g>
-<g class="note-head" id="Note-32-33">
-<g transform="translate(74.7448, 17.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(63.5361, 14.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(73.3994, 14.6450)">
-<rect x="-0.0650" y="-0.8020" width="0.1300" height="2.6159" ry="0.0400" fill="currentColor"/>
+<g class="bar-line">
 </g>
-<g class="note-head" id="Note-32-25">
-<g transform="translate(72.1601, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(75.9840, 14.6450)">
-<rect x="-0.0650" y="-0.4847" width="0.1300" height="2.7985" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(71.0647, 14.6450)">
-<rect x="-0.0650" y="-2.1976" width="0.1300" height="3.0115" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-32-17">
-<g transform="translate(69.8255, 15.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+<g class="bar-line">
+<g transform="translate(46.7428, 14.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(68.4801, 14.6450)">
-<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+<g class="bar-line">
 </g>
-<g transform="translate(106.8046, 13.6450)">
+<g class="bar-line">
+<g transform="translate(29.8781, 14.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(106.8046, 13.4645)">
 <polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
 </g>
-<g class="note-head" id="Note-32-56">
-<g transform="translate(81.0342, 17.1450)">
+<g class="note-head" id="Note-42-35">
+<g transform="translate(27.0792, 16.9645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(78.3186, 14.6450)">
-<rect x="-0.0650" y="-0.1980" width="0.1300" height="3.5119" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-32-40">
-<g transform="translate(77.0794, 18.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(82.2734, 14.6450)">
-<rect x="-0.0650" y="-0.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(112.0389, 14.6450)">
-<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-33-73">
-<g transform="translate(110.7997, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(109.4543, 14.6450)">
-<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-33-66">
-<g transform="translate(108.2150, 17.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(25.4188, 14.6450)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.9246 -0.3900 2.9246 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(99.0507, 13.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.3900 5.2593 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(89.9623, 14.4550)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(82.2084, 13.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(73.3344, 13.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.0093 0.4200 5.0093 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(65.8304, 11.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 0.4200 5.2593 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(56.7911, 12.4550)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(49.0372, 12.6450)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(39.9264, 13.6450)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(32.1725, 13.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.3900 5.2593 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(99.1157, 14.6450)">
-<rect x="-0.0650" y="-0.8123" width="0.1300" height="3.1262" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-33-35">
-<g transform="translate(97.8765, 17.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(95.1966, 14.6450)">
-<rect x="-0.0650" y="-0.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-33-16">
-<g transform="translate(93.9574, 17.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(106.8696, 14.6450)">
-<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-33-58">
-<g transform="translate(105.6304, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(104.2850, 14.6450)">
-<rect x="-0.0650" y="-0.9977" width="0.1300" height="2.8116" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-33-50">
-<g transform="translate(103.0458, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(101.7003, 14.6450)">
-<rect x="-0.0650" y="-0.9050" width="0.1300" height="2.7189" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-33-43">
-<g transform="translate(100.4611, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-31-4">
-<g transform="translate(41.3368, 17.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(39.9914, 14.6450)">
-<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-30-75">
-<g transform="translate(38.7522, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(42.5760, 14.6450)">
-<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(37.4068, 14.6450)">
-<rect x="-0.0650" y="-0.9977" width="0.1300" height="2.8116" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-30-67">
-<g transform="translate(36.1675, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(34.8221, 14.6450)">
-<rect x="-0.0650" y="-0.9050" width="0.1300" height="2.7189" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-30-60">
-<g transform="translate(33.5829, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(49.1022, 14.6450)">
-<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-31-28">
-<g transform="translate(47.8630, 15.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-31-11">
-<g transform="translate(43.9215, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(25.4838, 14.6450)">
-<rect x="-0.0650" y="-0.0042" width="0.1300" height="3.3181" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(20.8276, 14.6450)">
-<text font-family="emmentaler-20" font-size="4.0001" text-anchor="start" fill="currentColor">
-<tspan>6</tspan>
-</text>
-</g>
-<g transform="translate(20.7764, 16.6451)">
-<text font-family="emmentaler-20" font-size="4.0001" text-anchor="start" fill="currentColor">
-<tspan>8</tspan>
-</text>
-</g>
-<g transform="translate(18.5264, 12.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
-v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
-</g>
-<g transform="translate(15.0264, 15.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
-c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
-c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
-c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-30-28">
-<g transform="translate(24.2446, 18.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(32.2375, 14.6450)">
-<rect x="-0.0650" y="-0.8123" width="0.1300" height="3.1262" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(45.1607, 14.6450)">
-<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-30-52">
-<g transform="translate(30.9983, 17.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(28.3184, 14.6450)">
+<g transform="translate(28.3184, 14.4645)">
 <rect x="-0.0650" y="-0.1858" width="0.1300" height="2.4997" ry="0.0400" fill="currentColor"/>
 </g>
-<g class="note-head" id="Note-30-35">
-<g transform="translate(27.0792, 17.1450)">
+<g transform="translate(99.0507, 13.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.3900 5.2593 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(89.9623, 14.2745)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-42-52">
+<g transform="translate(30.9983, 16.9645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g class="note-head" id="Note-31-51">
-<g transform="translate(55.6169, 15.1450)">
+<g transform="translate(25.4838, 14.4645)">
+<rect x="-0.0650" y="-0.0042" width="0.1300" height="3.3181" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(32.2375, 14.4645)">
+<rect x="-0.0650" y="-0.8123" width="0.1300" height="3.1262" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(82.2084, 13.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-42-60">
+<g transform="translate(33.5829, 16.4645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g class="note-head" id="Note-31-59">
-<g transform="translate(58.2015, 15.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(56.8561, 14.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(59.4407, 14.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="3.0039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-32-2">
-<g transform="translate(64.6562, 14.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(54.2715, 14.6450)">
-<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-31-66">
-<g transform="translate(60.7862, 15.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(62.0254, 14.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-31-43">
-<g transform="translate(53.0322, 15.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(65.8954, 14.6450)">
-<rect x="-0.0650" y="-2.8024" width="0.1300" height="2.6163" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-31-36">
-<g transform="translate(50.1976, 16.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(51.4368, 14.6450)">
-<rect x="-0.0650" y="-2.0000" width="0.1300" height="3.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(113.6210, 26.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(32.3968, 26.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(73.4301, 26.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(72.9401, 26.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(93.4988, 26.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(52.3537, 26.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(5.6906, 28.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
-</g>
-<g transform="translate(5.6906, 27.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
-</g>
-<g transform="translate(5.6906, 26.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
-</g>
-<g transform="translate(5.6906, 25.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
-</g>
-<g transform="translate(5.6906, 24.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
-</g>
-<g transform="translate(80.9356, 26.6450)">
-<rect x="-0.0650" y="0.1861" width="0.1300" height="3.3086" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-36-38">
-<g transform="translate(80.8706, 26.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(77.8287, 26.6450)">
-<rect x="-0.0650" y="0.1861" width="0.1300" height="3.0536" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-36-31">
-<g transform="translate(77.7637, 26.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(88.3234, 26.6450)">
-<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-36-54">
-<g transform="translate(87.0842, 27.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(85.2166, 26.6450)">
-<rect x="-0.0650" y="-2.8036" width="0.1300" height="2.6175" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-36-46">
-<g transform="translate(83.9774, 26.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(67.5862, 26.6450)">
-<rect x="-0.0650" y="-2.4050" width="0.1300" height="3.2189" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-35-73">
-<g transform="translate(66.3469, 27.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(64.2293, 26.6450)">
-<rect x="-0.0650" y="-1.8213" width="0.1300" height="3.6352" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-35-65">
-<g transform="translate(62.9901, 28.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(105.3095, 24.4550)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(74.9719, 26.6450)">
-<rect x="-0.0650" y="-0.8139" width="0.1300" height="3.8192" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-36-22">
-<g transform="translate(74.9069, 25.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(70.9430, 26.6450)">
-<rect x="-0.0650" y="-2.9887" width="0.1300" height="2.8026" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-36-2">
-<g transform="translate(69.7038, 26.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(111.5881, 26.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-37-36">
-<g transform="translate(110.3489, 27.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(108.4813, 26.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="3.0039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-37-29">
-<g transform="translate(107.2421, 27.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(95.9890, 23.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(85.1516, 23.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 0.4200 6.3036 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(74.9069, 29.6450)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.0536 0.3000 6.0536 0.7000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(64.1643, 24.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.8036 -1.3900 6.8036 -0.9900 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(54.8439, 25.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.3900 6.3036 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(43.9574, 24.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(34.8870, 23.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 0.4200 6.3036 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(24.0852, 24.4550)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(14.7648, 24.6450)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(96.0540, 26.6450)">
-<rect x="-0.0650" y="-2.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-36-78">
-<g transform="translate(94.8148, 27.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(91.4302, 26.6450)">
-<rect x="-0.0650" y="-2.1964" width="0.1300" height="3.0102" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(102.2677, 26.6450)">
-<rect x="-0.0650" y="-2.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(105.3745, 26.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-37-21">
-<g transform="translate(104.1353, 27.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-36-61">
-<g transform="translate(90.1910, 27.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-37-13">
-<g transform="translate(101.0285, 27.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(99.1609, 26.6450)">
-<rect x="-0.0650" y="-2.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-37-6">
-<g transform="translate(97.9216, 26.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-34-68">
-<g transform="translate(33.7127, 26.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(30.3639, 26.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-34-51">
-<g transform="translate(29.1247, 27.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(27.2571, 26.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="3.0039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-34-44">
-<g transform="translate(26.0178, 27.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(38.0588, 26.6450)">
-<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-34-76">
-<g transform="translate(36.8196, 27.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(34.9520, 26.6450)">
-<rect x="-0.0650" y="-2.8036" width="0.1300" height="2.6175" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(14.8298, 26.6450)">
-<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-34-13">
-<g transform="translate(13.5906, 27.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(9.9906, 24.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
-v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
-</g>
-<g transform="translate(6.4906, 27.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
-c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
-c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
-c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
-</g>
-<g transform="translate(21.0434, 26.6450)">
-<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(24.1502, 26.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-34-36">
-<g transform="translate(22.9110, 27.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-34-28">
-<g transform="translate(19.8042, 27.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(17.6866, 26.6450)">
-<rect x="-0.0650" y="-2.0000" width="0.1300" height="3.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-34-21">
-<g transform="translate(16.4474, 28.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-35-50">
-<g transform="translate(56.7765, 28.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-35-25">
-<g transform="translate(48.9969, 29.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(50.2361, 26.6450)">
-<rect x="-0.0650" y="-1.8100" width="0.1300" height="4.1239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-35-42">
-<g transform="translate(53.6697, 29.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(54.9089, 26.6450)">
-<rect x="-0.0650" y="-0.8119" width="0.1300" height="3.1258" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-35-2">
-<g transform="translate(39.9264, 27.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(41.1656, 26.6450)">
-<rect x="-0.0650" y="-2.1964" width="0.1300" height="3.0102" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(61.1225, 26.6450)">
-<rect x="-0.0650" y="-0.9981" width="0.1300" height="2.8119" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-35-57">
-<g transform="translate(59.8833, 28.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-35-10">
-<g transform="translate(42.7832, 28.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(44.0224, 26.6450)">
-<rect x="-0.0650" y="-1.8100" width="0.1300" height="3.6239" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(58.0157, 26.6450)">
+<g transform="translate(34.8221, 14.4645)">
 <rect x="-0.0650" y="-0.9050" width="0.1300" height="2.7189" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(47.3792, 26.6450)">
-<rect x="-0.0650" y="-1.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
+<g transform="translate(73.3344, 13.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.0093 0.4200 5.0093 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
 </g>
-<g class="note-head" id="Note-35-18">
-<g transform="translate(46.1400, 27.6450)">
+<g class="note-head" id="Note-42-67">
+<g transform="translate(36.1675, 16.4645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(5.6906, 40.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+<g transform="translate(37.4068, 14.4645)">
+<rect x="-0.0650" y="-0.9977" width="0.1300" height="2.8116" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(5.6906, 39.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+<g transform="translate(65.8304, 11.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 0.4200 5.2593 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
 </g>
-<g transform="translate(5.6906, 38.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
-</g>
-<g transform="translate(5.6906, 37.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
-</g>
-<g transform="translate(5.6906, 36.6450)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
-</g>
-<g transform="translate(47.6336, 38.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(100.9222, 38.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(29.7904, 38.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(83.2933, 38.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(113.6210, 38.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(113.1310, 38.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(65.4992, 38.6450)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(5.6906, 41.6450)">
-<rect x="35.6694" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
-</g>
-<g transform="translate(5.6906, 41.6450)">
-<rect x="20.7822" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
-</g>
-<g transform="translate(81.6256, 38.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-40-17">
-<g transform="translate(80.3864, 39.1450)">
+<g class="note-head" id="Note-42-75">
+<g transform="translate(38.7522, 16.4645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(78.8840, 38.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="3.0039" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(85.7116, 38.6450)">
-<rect x="-0.0650" y="-2.8028" width="0.1300" height="2.6167" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-40-42">
-<g transform="translate(87.2140, 39.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-40-34">
-<g transform="translate(84.4724, 38.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(88.4532, 38.6450)">
-<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(67.9174, 38.6450)">
-<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-39-57">
-<g transform="translate(66.6782, 39.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(63.7600, 38.6450)">
+<g transform="translate(39.9914, 14.4645)">
 <rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
 </g>
-<g class="note-head" id="Note-39-40">
-<g transform="translate(62.5208, 40.6450)">
+<g transform="translate(56.7911, 12.2745)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(49.0372, 12.4645)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-43-4">
+<g transform="translate(41.3368, 16.9645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(103.2754, 37.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.3900 5.5733 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(73.4007, 38.6450)">
-<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(76.1423, 38.6450)">
-<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-40-2">
-<g transform="translate(74.9031, 39.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-40-10">
-<g transform="translate(77.6448, 39.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-39-72">
-<g transform="translate(72.1615, 39.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(70.4090, 38.6450)">
-<rect x="-0.0650" y="-2.0000" width="0.1300" height="3.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-39-65">
-<g transform="translate(69.1698, 40.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-41-28">
-<g transform="translate(107.5845, 40.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(111.6304, 37.1850)">
-<path transform="scale(0.0040, -0.0040)" d="M0 0v-250h-16v250h16zM0 0c0 -197 207 -336 207 -533c0 -71 -15 -141 -41 -207c-5 -8 -13 -12 -20 -12c-13 0 -26 11 -23 27c26 61 42 126 42 192c0 103 -94 208 -165 283v250z" fill="currentColor"/>
-</g>
-<g transform="translate(111.5654, 38.6450)">
-<rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-41-36">
-<g transform="translate(110.3262, 40.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(108.8237, 38.6450)">
-<rect x="-0.0650" y="-0.9978" width="0.1300" height="2.8117" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(106.0821, 38.6450)">
-<rect x="-0.0650" y="-0.9050" width="0.1300" height="2.7189" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-41-21">
-<g transform="translate(104.8429, 40.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(93.6215, 36.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(85.6466, 35.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 0.4200 5.5733 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(76.0773, 36.4550)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(67.8524, 36.6450)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(58.2117, 37.6450)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(49.9868, 37.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.3900 5.5733 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(40.3686, 38.4550)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(32.1437, 37.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(22.7397, 37.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.3233 0.4200 5.3233 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(14.7648, 35.8350)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 0.4200 5.5733 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<g transform="translate(96.6781, 38.6450)">
-<rect x="-0.0650" y="-1.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-40-65">
-<g transform="translate(95.4389, 39.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(93.6865, 38.6450)">
-<rect x="-0.0650" y="-1.8100" width="0.1300" height="3.6239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-40-57">
-<g transform="translate(92.4473, 40.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(91.1948, 38.6450)">
-<rect x="-0.0650" y="-2.1972" width="0.1300" height="3.0111" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-40-49">
-<g transform="translate(89.9556, 39.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(103.3404, 38.6450)">
-<rect x="-0.0650" y="-0.8122" width="0.1300" height="3.1261" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-41-13">
-<g transform="translate(102.1012, 41.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(99.1698, 38.6450)">
-<rect x="-0.0650" y="-1.8100" width="0.1300" height="4.1239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-40-72">
-<g transform="translate(97.9306, 41.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(32.2087, 38.6450)">
-<rect x="-0.0650" y="-0.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-38-27">
-<g transform="translate(30.9694, 41.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(28.0380, 38.6450)">
-<rect x="-0.0650" y="-0.1975" width="0.1300" height="3.5114" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-38-11">
-<g transform="translate(26.7988, 42.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-38-50">
-<g transform="translate(39.1944, 41.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(37.6919, 38.6450)">
-<rect x="-0.0650" y="-0.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-38-42">
-<g transform="translate(36.4527, 41.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(34.9503, 38.6450)">
-<rect x="-0.0650" y="-0.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-38-35">
-<g transform="translate(33.7111, 40.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(14.8298, 38.6450)">
-<rect x="-0.0650" y="-2.8028" width="0.1300" height="2.6167" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-37-53">
-<g transform="translate(13.5906, 38.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g class="note-head" id="Note-37-61">
-<g transform="translate(16.3322, 39.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(9.9906, 36.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
-v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
-</g>
-<g transform="translate(6.4906, 39.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
-c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
-c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
-c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
-</g>
-<g transform="translate(25.5463, 38.6450)">
-<rect x="-0.0650" y="-0.4855" width="0.1300" height="2.7994" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-38-4">
-<g transform="translate(24.3071, 41.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(22.8047, 38.6450)">
-<rect x="-0.0650" y="-0.8025" width="0.1300" height="2.6164" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-37-76">
-<g transform="translate(21.5655, 40.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(20.3131, 38.6450)">
-<rect x="-0.0650" y="-2.1972" width="0.1300" height="3.0111" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-37-68">
-<g transform="translate(19.0738, 39.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(17.5714, 38.6450)">
-<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(52.7935, 38.6450)">
-<rect x="-0.0650" y="-0.9050" width="0.1300" height="2.7189" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-39-10">
-<g transform="translate(51.5542, 40.6450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(40.4336, 38.6450)">
-<rect x="-0.0650" y="-0.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
-</g>
-<g transform="translate(50.0518, 38.6450)">
-<rect x="-0.0650" y="-0.8122" width="0.1300" height="3.1261" ry="0.0400" fill="currentColor"/>
-</g>
-<g class="note-head" id="Note-39-2">
-<g transform="translate(48.8126, 41.1450)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</g>
-<g transform="translate(61.0184, 38.6450)">
+<g transform="translate(20.8276, 14.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M170 259c-51 0 -53 -43 -53 -100v-18v-18c0 -57 2 -100 53 -100c57 0 61 51 61 118s-4 118 -61 118zM117 266c15 10 33 16 53 16c101 0 170 -46 170 -141s-69 -141 -170 -141c-112 0 -170 124 -170 250c0 128 72 250 190 250c70 0 136 -39 136 -103
+c0 -36 -29 -66 -65 -66s-66 30 -66 66c0 24 40 25 40 49c0 20 -23 31 -45 31c-66 0 -75 -65 -75 -139c0 -24 2 -48 2 -72z" fill="currentColor"/>
+</g>
+<g transform="translate(20.7764, 16.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M261 287c25 30 44 64 44 103c0 54 -55 87 -114 87c-46 0 -73 -36 -73 -71c0 -21 10 -42 31 -54zM292 269c23 -13 80 -54 80 -125c0 -73 -66 -144 -189 -144c-94 0 -183 54 -183 140c0 50 36 87 72 123c-37 28 -55 66 -55 103c0 68 60 134 174 134c80 0 157 -39 157 -110
+c0 -46 -25 -86 -56 -121zM103 244c-31 -30 -59 -61 -59 -104c0 -69 66 -117 139 -117c54 0 86 42 86 83c0 24 -10 48 -35 62z" fill="currentColor"/>
+</g>
+<g transform="translate(42.5760, 14.4645)">
 <rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<g class="note-head" id="Note-39-33">
-<g transform="translate(59.7792, 41.1450)">
+<g transform="translate(39.9264, 13.4645)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.2000 5.2593 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-43-11">
+<g transform="translate(43.9215, 16.4645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(58.2767, 38.6450)">
+<g transform="translate(45.1607, 14.4645)">
 <rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
 </g>
-<g class="note-head" id="Note-39-25">
-<g transform="translate(57.0375, 40.6450)">
+<g transform="translate(32.1725, 13.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.2593 -0.3900 5.2593 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(25.4188, 14.4645)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.9246 -0.3900 2.9246 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-43-28">
+<g transform="translate(47.8630, 15.4645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(55.5351, 38.6450)">
-<rect x="-0.0650" y="-0.9978" width="0.1300" height="2.8117" ry="0.0400" fill="currentColor"/>
+<g transform="translate(18.5264, 12.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
+v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
 </g>
-<g class="note-head" id="Note-39-17">
-<g transform="translate(54.2959, 40.6450)">
+<g transform="translate(49.1022, 14.4645)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-43-36">
+<g transform="translate(50.1976, 16.4645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g class="note-head" id="Note-38-58">
-<g transform="translate(41.6860, 42.1450)">
+<g transform="translate(51.4368, 14.4645)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="3.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-43-43">
+<g transform="translate(53.0322, 15.4645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(42.9252, 38.6450)">
-<rect x="-0.0650" y="-0.1900" width="0.1300" height="3.5039" ry="0.0400" fill="currentColor"/>
+<g transform="translate(54.2715, 14.4645)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(45.9169, 38.6450)">
+<g class="note-head" id="Note-43-51">
+<g transform="translate(55.6169, 14.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(56.8561, 14.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-43-59">
+<g transform="translate(58.2015, 15.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(15.0264, 15.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
+c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
+c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
+c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
+</g>
+<g transform="translate(59.4407, 14.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="3.0039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-43-66">
+<g transform="translate(60.7862, 14.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(62.0254, 14.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-44-2">
+<g transform="translate(64.6562, 14.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g class="note-head" id="Note-42-28">
+<g transform="translate(24.2446, 17.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(65.8954, 14.4645)">
+<rect x="-0.0650" y="-2.8024" width="0.1300" height="2.6163" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-44-10">
+<g transform="translate(67.2409, 14.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(68.4801, 14.4645)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-44-17">
+<g transform="translate(69.8255, 15.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(71.0647, 14.4645)">
+<rect x="-0.0650" y="-2.1976" width="0.1300" height="3.0115" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-44-25">
+<g transform="translate(72.1601, 16.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(73.3994, 14.4645)">
+<rect x="-0.0650" y="-0.8020" width="0.1300" height="2.6159" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-44-33">
+<g transform="translate(74.7448, 16.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(75.9840, 14.4645)">
+<rect x="-0.0650" y="-0.4847" width="0.1300" height="2.7985" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(112.0389, 14.4645)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-44-40">
+<g transform="translate(77.0794, 17.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(78.3186, 14.4645)">
+<rect x="-0.0650" y="-0.1980" width="0.1300" height="3.5119" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-45-73">
+<g transform="translate(110.7997, 16.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g class="note-head" id="Note-44-56">
+<g transform="translate(81.0342, 16.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(82.2734, 14.4645)">
+<rect x="-0.0650" y="-0.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-44-64">
+<g transform="translate(83.6189, 16.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(84.8581, 14.4645)">
+<rect x="-0.0650" y="-0.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-44-71">
+<g transform="translate(86.2035, 16.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(87.4427, 14.4645)">
+<rect x="-0.0650" y="-0.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-45-2">
+<g transform="translate(88.7881, 16.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(90.0273, 14.4645)">
 <rect x="-0.0650" y="-0.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
 </g>
-<g class="note-head" id="Note-38-64">
-<g transform="translate(44.6776, 41.1450)">
+<g class="note-head" id="Note-45-10">
+<g transform="translate(91.1228, 17.9645)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </g>
-<g transform="translate(30.6948, 165.1418)">
-<text font-family="LilyPond Serif" font-size="2.2001" text-anchor="start" fill="currentColor">
+<g transform="translate(92.3620, 14.4645)">
+<rect x="-0.0650" y="-0.1900" width="0.1300" height="3.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-45-16">
+<g transform="translate(93.9574, 16.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(95.1966, 14.4645)">
+<rect x="-0.0650" y="-0.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-45-35">
+<g transform="translate(97.8765, 16.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(99.1157, 14.4645)">
+<rect x="-0.0650" y="-0.8123" width="0.1300" height="3.1262" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(109.4543, 14.4645)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-45-43">
+<g transform="translate(100.4611, 16.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(101.7003, 14.4645)">
+<rect x="-0.0650" y="-0.9050" width="0.1300" height="2.7189" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-45-50">
+<g transform="translate(103.0458, 16.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(104.2850, 14.4645)">
+<rect x="-0.0650" y="-0.9977" width="0.1300" height="2.8116" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-45-66">
+<g transform="translate(108.2150, 16.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g class="note-head" id="Note-45-58">
+<g transform="translate(105.6304, 16.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(106.8696, 14.4645)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="staff-symbol">
+<g transform="translate(5.6906, 28.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+<g transform="translate(5.6906, 27.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+<g transform="translate(5.6906, 26.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+<g transform="translate(5.6906, 25.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+<g transform="translate(5.6906, 24.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+</g>
+<g class="bar-line">
+<g transform="translate(113.6210, 26.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(93.4988, 26.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(73.4301, 26.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(72.9401, 26.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(52.3537, 26.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(32.3968, 26.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g transform="translate(105.3095, 24.2745)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-46-13">
+<g transform="translate(13.5906, 27.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(14.8298, 26.4645)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(95.9890, 23.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-46-21">
+<g transform="translate(16.4474, 28.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(17.6866, 26.4645)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="3.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(85.1516, 23.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 0.4200 6.3036 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-46-28">
+<g transform="translate(19.8042, 27.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(21.0434, 26.4645)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(74.9069, 29.4645)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.0536 0.3000 6.0536 0.7000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-46-36">
+<g transform="translate(22.9110, 26.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(24.1502, 26.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(64.1643, 24.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.8036 -1.3900 6.8036 -0.9900 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(54.8439, 25.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.3900 6.3036 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-46-44">
+<g transform="translate(26.0178, 27.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(27.2571, 26.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="3.0039" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(43.9574, 24.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-46-51">
+<g transform="translate(29.1247, 26.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(30.3639, 26.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(34.8870, 23.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 0.4200 6.3036 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(24.0852, 24.2745)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-46-68">
+<g transform="translate(33.7127, 26.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(34.9520, 26.4645)">
+<rect x="-0.0650" y="-2.8036" width="0.1300" height="2.6175" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(14.7648, 24.4645)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3036 -0.2000 6.3036 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-46-76">
+<g transform="translate(36.8196, 26.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(38.0588, 26.4645)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-47-2">
+<g transform="translate(39.9264, 27.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(41.1656, 26.4645)">
+<rect x="-0.0650" y="-2.1964" width="0.1300" height="3.0102" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-47-10">
+<g transform="translate(42.7832, 28.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(44.0224, 26.4645)">
+<rect x="-0.0650" y="-1.8100" width="0.1300" height="3.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-47-18">
+<g transform="translate(46.1400, 27.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(9.9906, 24.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
+v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
+</g>
+<g transform="translate(47.3792, 26.4645)">
+<rect x="-0.0650" y="-1.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-47-25">
+<g transform="translate(48.9969, 28.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(50.2361, 26.4645)">
+<rect x="-0.0650" y="-1.8100" width="0.1300" height="4.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-47-42">
+<g transform="translate(53.6697, 28.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(6.4906, 27.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
+c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
+c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
+c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
+</g>
+<g transform="translate(54.9089, 26.4645)">
+<rect x="-0.0650" y="-0.8119" width="0.1300" height="3.1258" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-47-50">
+<g transform="translate(56.7765, 28.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(58.0157, 26.4645)">
+<rect x="-0.0650" y="-0.9050" width="0.1300" height="2.7189" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-47-57">
+<g transform="translate(59.8833, 28.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(61.1225, 26.4645)">
+<rect x="-0.0650" y="-0.9981" width="0.1300" height="2.8119" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-47-65">
+<g transform="translate(62.9901, 28.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(64.2293, 26.4645)">
+<rect x="-0.0650" y="-1.8213" width="0.1300" height="3.6352" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-47-73">
+<g transform="translate(66.3469, 27.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(67.5862, 26.4645)">
+<rect x="-0.0650" y="-2.4050" width="0.1300" height="3.2189" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-48-2">
+<g transform="translate(69.7038, 26.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(70.9430, 26.4645)">
+<rect x="-0.0650" y="-2.9887" width="0.1300" height="2.8026" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(111.5881, 26.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-48-22">
+<g transform="translate(74.9069, 25.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g class="note-head" id="Note-49-36">
+<g transform="translate(110.3489, 26.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(74.9719, 26.4645)">
+<rect x="-0.0650" y="-0.8139" width="0.1300" height="3.8192" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-48-31">
+<g transform="translate(77.7637, 26.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(77.8287, 26.4645)">
+<rect x="-0.0650" y="0.1861" width="0.1300" height="3.0536" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-48-38">
+<g transform="translate(80.8706, 26.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(80.9356, 26.4645)">
+<rect x="-0.0650" y="0.1861" width="0.1300" height="3.3086" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-48-46">
+<g transform="translate(83.9774, 26.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(85.2166, 26.4645)">
+<rect x="-0.0650" y="-2.8036" width="0.1300" height="2.6175" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-48-54">
+<g transform="translate(87.0842, 26.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(88.3234, 26.4645)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-48-61">
+<g transform="translate(90.1910, 27.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(91.4302, 26.4645)">
+<rect x="-0.0650" y="-2.1964" width="0.1300" height="3.0102" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-48-78">
+<g transform="translate(94.8148, 26.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(96.0540, 26.4645)">
+<rect x="-0.0650" y="-2.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-49-6">
+<g transform="translate(97.9216, 26.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(99.1609, 26.4645)">
+<rect x="-0.0650" y="-2.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-49-13">
+<g transform="translate(101.0285, 26.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(102.2677, 26.4645)">
+<rect x="-0.0650" y="-2.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(108.4813, 26.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="3.0039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-49-21">
+<g transform="translate(104.1353, 26.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(105.3745, 26.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-49-29">
+<g transform="translate(107.2421, 27.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(5.6906, 41.4645)">
+<rect x="35.6694" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(5.6906, 41.4645)">
+<rect x="20.7822" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g class="staff-symbol">
+<g transform="translate(5.6906, 40.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+<g transform="translate(5.6906, 39.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+<g transform="translate(5.6906, 38.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+<g transform="translate(5.6906, 37.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+<g transform="translate(5.6906, 36.4645)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="108.0705" y2="0"/>
+</g>
+</g>
+<g class="bar-line">
+<g transform="translate(113.6210, 38.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(113.1310, 38.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+<g transform="translate(100.9222, 38.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(83.2933, 38.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(65.4992, 38.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(47.6336, 38.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g class="bar-line">
+<g transform="translate(29.7904, 38.4645)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+</g>
+<g class="bar-line">
+</g>
+<g transform="translate(103.2754, 37.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.3900 5.5733 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-49-53">
+<g transform="translate(13.5906, 38.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(14.8298, 38.4645)">
+<rect x="-0.0650" y="-2.8028" width="0.1300" height="2.6167" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(93.6215, 36.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-49-61">
+<g transform="translate(16.3322, 38.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(17.5714, 38.4645)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(85.6466, 35.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 0.4200 5.5733 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-49-68">
+<g transform="translate(19.0738, 39.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(20.3131, 38.4645)">
+<rect x="-0.0650" y="-2.1972" width="0.1300" height="3.0111" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(76.0773, 36.2745)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-49-76">
+<g transform="translate(21.5655, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(22.8047, 38.4645)">
+<rect x="-0.0650" y="-0.8025" width="0.1300" height="2.6164" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(67.8524, 36.4645)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(58.2117, 37.4645)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-50-4">
+<g transform="translate(24.3071, 40.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(25.5463, 38.4645)">
+<rect x="-0.0650" y="-0.4855" width="0.1300" height="2.7994" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(49.9868, 37.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.3900 5.5733 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-50-11">
+<g transform="translate(26.7988, 41.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(28.0380, 38.4645)">
+<rect x="-0.0650" y="-0.1975" width="0.1300" height="3.5114" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(40.3686, 38.2745)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(32.1437, 37.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 -0.2000 5.5733 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-50-27">
+<g transform="translate(30.9694, 40.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(32.2087, 38.4645)">
+<rect x="-0.0650" y="-0.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(22.7397, 37.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.3233 0.4200 5.3233 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-50-35">
+<g transform="translate(33.7111, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(34.9503, 38.4645)">
+<rect x="-0.0650" y="-0.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(14.7648, 35.6545)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5733 0.4200 5.5733 0.8200 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g class="note-head" id="Note-50-42">
+<g transform="translate(36.4527, 40.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(37.6919, 38.4645)">
+<rect x="-0.0650" y="-0.8100" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-50-50">
+<g transform="translate(39.1944, 40.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(40.4336, 38.4645)">
+<rect x="-0.0650" y="-0.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-50-58">
+<g transform="translate(41.6860, 41.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(42.9252, 38.4645)">
+<rect x="-0.0650" y="-0.1900" width="0.1300" height="3.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-50-64">
+<g transform="translate(44.6776, 40.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(45.9169, 38.4645)">
+<rect x="-0.0650" y="-0.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-51-2">
+<g transform="translate(48.8126, 40.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(9.9906, 36.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
+v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
+</g>
+<g transform="translate(50.0518, 38.4645)">
+<rect x="-0.0650" y="-0.8122" width="0.1300" height="3.1261" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-51-10">
+<g transform="translate(51.5542, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(52.7935, 38.4645)">
+<rect x="-0.0650" y="-0.9050" width="0.1300" height="2.7189" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-51-17">
+<g transform="translate(54.2959, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(55.5351, 38.4645)">
+<rect x="-0.0650" y="-0.9978" width="0.1300" height="2.8117" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-51-25">
+<g transform="translate(57.0375, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(58.2767, 38.4645)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-51-33">
+<g transform="translate(59.7792, 40.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(6.4906, 39.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
+c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
+c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
+c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
+</g>
+<g transform="translate(61.0184, 38.4645)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-51-40">
+<g transform="translate(62.5208, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(63.7600, 38.4645)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(111.6304, 37.0045)">
+<path transform="scale(0.0040, -0.0040)" d="M0 0v-250h-16v250h16zM0 0c0 -197 207 -336 207 -533c0 -71 -15 -141 -41 -207c-5 -8 -13 -12 -20 -12c-13 0 -26 11 -23 27c26 61 42 126 42 192c0 103 -94 208 -165 283v250z" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-51-57">
+<g transform="translate(66.6782, 39.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(67.9174, 38.4645)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-51-65">
+<g transform="translate(69.1698, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(70.4090, 38.4645)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="3.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(111.5654, 38.4645)">
+<rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-51-72">
+<g transform="translate(72.1615, 39.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(73.4007, 38.4645)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-53-36">
+<g transform="translate(110.3262, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g class="note-head" id="Note-52-2">
+<g transform="translate(74.9031, 38.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(76.1423, 38.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-52-10">
+<g transform="translate(77.6448, 39.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(78.8840, 38.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="3.0039" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-52-17">
+<g transform="translate(80.3864, 38.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(81.6256, 38.4645)">
+<rect x="-0.0650" y="-2.1900" width="0.1300" height="2.5039" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(108.8237, 38.4645)">
+<rect x="-0.0650" y="-0.9978" width="0.1300" height="2.8117" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-53-28">
+<g transform="translate(107.5845, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g class="note-head" id="Note-52-34">
+<g transform="translate(84.4724, 38.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(85.7116, 38.4645)">
+<rect x="-0.0650" y="-2.8028" width="0.1300" height="2.6167" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-52-42">
+<g transform="translate(87.2140, 38.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(88.4532, 38.4645)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-52-49">
+<g transform="translate(89.9556, 39.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(91.1948, 38.4645)">
+<rect x="-0.0650" y="-2.1972" width="0.1300" height="3.0111" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-52-57">
+<g transform="translate(92.4473, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(93.6865, 38.4645)">
+<rect x="-0.0650" y="-1.8100" width="0.1300" height="3.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(106.0821, 38.4645)">
+<rect x="-0.0650" y="-0.9050" width="0.1300" height="2.7189" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-52-65">
+<g transform="translate(95.4389, 39.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(96.6781, 38.4645)">
+<rect x="-0.0650" y="-1.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-53-21">
+<g transform="translate(104.8429, 40.4645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g class="note-head" id="Note-52-72">
+<g transform="translate(97.9306, 40.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(99.1698, 38.4645)">
+<rect x="-0.0650" y="-1.8100" width="0.1300" height="4.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<g class="note-head" id="Note-53-13">
+<g transform="translate(102.1012, 40.9645)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</g>
+<g transform="translate(103.3404, 38.4645)">
+<rect x="-0.0650" y="-0.8122" width="0.1300" height="3.1261" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(34.0067, 165.1202)">
+<text font-family="serif" font-size="2.2000" text-anchor="start" fill="currentColor">
 <tspan>Lily was here 2.24.1 -- automatically converted from ABC</tspan>
 </text>
 </g>
