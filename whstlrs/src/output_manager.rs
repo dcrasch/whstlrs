@@ -12,7 +12,7 @@ impl OutputConnection {
         for (i, p) in out_ports.iter().enumerate() {
             log::info!("{}: {}", i, midi_out.port_name(p).unwrap());
         }
-        let out_port = &out_ports[0];
+        let out_port = &out_ports[1];
         let conn_out = midi_out.connect(out_port, "whstlrs-out").unwrap();
         OutputConnection { conn_out }
     }
@@ -24,6 +24,6 @@ impl OutputConnection {
                 return;
             }
         };
-        // DEBUG self.conn_out.send(&[msg, key, velocity]).unwrap();
+        self.conn_out.send(&[msg, key, velocity]).unwrap();
     }
 }

@@ -18,7 +18,7 @@ impl InputConnection {
         let tx = self.tx.clone();
         let midi_in = MidiInput::new("My Test Input").unwrap();
         let in_ports = midi_in.ports();
-        let in_port = &in_ports[1];
+        let in_port = &in_ports[0];
         let conn_in = midi_in
             .connect(
                 &in_port,
